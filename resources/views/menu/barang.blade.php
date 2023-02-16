@@ -14,7 +14,6 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div >
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Jenis-jenis Barang</h3>
@@ -58,7 +57,6 @@
                             </table>                           
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
