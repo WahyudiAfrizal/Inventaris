@@ -1,5 +1,5 @@
 @extends('home')
-@section('halaman','Barang')
+@section('halaman','Menu Transaksi')
 @section('content')
 
 <div class="content-wrapper">
