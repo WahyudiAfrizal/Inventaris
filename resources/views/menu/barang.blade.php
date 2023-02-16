@@ -18,6 +18,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Jenis-jenis Barang</h3>
+                            <a href="#" class="float-right btn btn-sm btn-success">Tambah</a>
                         </div>
                         
                         {{-- Tabel --}}
@@ -54,9 +55,7 @@
                                     </tr>
                                     @endforeach
                                 </tbody>
-                            </table>
-                            <a href="#" class="float-right btn btn-sm btn-primary">Kembali</a>
-                            <a href="#" class="float-right btn btn-sm btn-success">Tambah</a>
+                            </table>                           
                         </div>
                     </div>
                 </div>
