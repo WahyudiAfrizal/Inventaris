@@ -1,4 +1,4 @@
-@extends('home')
+@extends('index')
 @section('halaman','Barang')
 @section('content')
 
