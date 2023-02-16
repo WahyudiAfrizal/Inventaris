@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Tabel Transaksi</h1>
+                    <h1>Transaksi</h1>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div >
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Jenis-jenis Transksi</h3>
+                        <h3 class="card-title">Barang Masuk</h3>
                     </div>
 
                     {{-- Tabel --}}
@@ -27,13 +27,19 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px">No</th>
-                                    <th>Task</th>
-                                    <th>Progress</th>
-                                    <th style="width: 40px">Label</th>
+                                    <th>Kode Barang</th>
+                                    <th>Nama Barang</th>
+                                    <th>Jenis Barang</th>
+                                    <th>Jumlah Barang</th>
+                                    <th>Satuan</th>
+                                    <th>Opsi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

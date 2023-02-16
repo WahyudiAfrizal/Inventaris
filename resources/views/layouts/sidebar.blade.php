@@ -2,15 +2,15 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/AA.png" class="img-circle elevation-2" alt="User Image">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="dist/img/AA.png" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a style="color: white"><b>INVENTORI</b></a>
+            </div>
         </div>
-        <div class="info">
-          <a style="color: white"><b>INVENTORI</b></a>
-        </div>
-      </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/" class="nav-link">
               <i class="nav-icon fas fa-search"></i>
                 <p>
                   Laporan
@@ -45,5 +45,5 @@
       </nav>
     </div>
     <!-- /.sidebar -->
-    
+
 </aside>
