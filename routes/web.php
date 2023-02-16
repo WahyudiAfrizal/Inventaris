@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 
 
-Route::get('/', function () {return view('login');});
-Auth::routes();
+Route::get('/', function () {return view('auth.login');});
+Auth::routes(['register' => false]);
 
 Route::get('/home',     [HomeController::class, 'index'])->name('index');
 Route::get('/barang',   [UserController::class, 'index']);
