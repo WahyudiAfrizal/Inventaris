@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,5 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/barang', function () {return view('menu.barang');});
-Route::get('/barangmasuk', function () {return view('menu.transaksi.masuk');});
-Route::get('/barangkeluar', function () {return view('menu.transaksi.keluar');});
+Route::get('/transaksi', function () {return view('menu.transaksi');});
