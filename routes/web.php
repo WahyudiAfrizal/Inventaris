@@ -20,5 +20,7 @@ Route::get('/', function () {return view('login');});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/barang', function () {return view('menu.barang');});
-Route::get('/transaksi', function () {return view('menu.transaksi');});
+Route::get('/barang', [UserController::class, 'index']);
+
+Route::get('/transaksimasuk', function () {return view('menu.transaksi.masuk');});
+Route::get('/transaksikeluar', function () {return view('menu.transaksi.keluar');});

@@ -35,13 +35,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/barangmasuk" class="nav-link">
+                            <a href="/transaksimasuk" class="nav-link">
                                 <i class="nav-icon far fa-circle text-info"></i>
                                 <p>Barang Masuk</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/barangkeluar" class="nav-link">
+                            <a href="/transaksikeluar" class="nav-link">
                                 <i class="nav-icon far fa-circle text-danger"></i>
                                 <p>Barang Keluar</p>
                             </a>
