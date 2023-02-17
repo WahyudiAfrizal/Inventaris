@@ -15,4 +15,6 @@ Auth::routes(['register' => false]);
 
 Route::get('/home',     [HomeController::class, 'index'])->name('index');
 Route::get('/barang',   [UserController::class, 'index']);
+Route::get('/barang/tambah',   [UserController::class, 'index_tambah']);
+Route::post('/barang/aksi',   [UserController::class, 'index_aksi']);
 Route::get('/transaksi', [TransaksiController::class, 'index']);
