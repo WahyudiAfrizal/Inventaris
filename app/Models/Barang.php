@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Barang extends Model
 {
     protected $table = "barang";
-    protected $fillable = ["KodeBarang", "NamaBarang", "StokAwal", "HargaBarang",
-    "Pemasukan", "Pengeluaran", "StokAkhir"];
+    protected $fillable = ["NamaBarang"];
 }

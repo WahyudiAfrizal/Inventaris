@@ -15,13 +15,7 @@ return new class extends Migration
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('KodeBarang');
             $table->string('NamaBarang');
-            $table->integer('StokAwal');
-            $table->integer('HargaBarang');
-            $table->integer('Pemasukan');
-            $table->integer('Pengeluaran');
-            $table->integer('StokAkhir');
             $table->timestamps();
         });
     }
