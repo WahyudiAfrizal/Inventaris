@@ -14,15 +14,39 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 @can('isSuperAdmin')
+                {{-- Dashboard --}}
+                <li class="nav-item">
+                    <a href="/home" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
                 
                 {{-- Menu Barang --}}
                 <li class="nav-item">
-                    <a href="/barang" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-envelope"></i>
                         <p>
-                            Barang
+                            Master
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                          <a href="/barang" class="nav-link">
+                            <i class="nav-icon far fa-circle text-danger"></i>
+                            <p>Jenis Barang</p>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Data Barang</p>
+                          </a>
+                        </li>
+                    </ul>
                 </li>
 
                 {{-- Menu Transaksi --}}
@@ -38,7 +62,7 @@
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
                       <a href="#" class="nav-link">
-                          <i class="nav-icon fas fa-file"></i>
+                          <i class="nav-icon fas fa-book"></i>
                           <p>
                               Laporan
                           </p>
@@ -46,6 +70,15 @@
                 </li>
 
                 @elsecan('isPetugas')
+                {{-- Dashboard --}}
+                <li class="nav-item">
+                    <a href="/home" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
 
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
