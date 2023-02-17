@@ -15,7 +15,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 @can('isSuperAdmin')
                 
-                {{-- Menu BArang --}}
+                {{-- Menu Barang --}}
                 <li class="nav-item">
                     <a href="/barang" class="nav-link">
                         <i class="nav-icon fas fa-envelope"></i>
@@ -27,27 +27,13 @@
 
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/transaksi" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Transaksi
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a a href="/transaksimasuk" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Barang Masuk</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/transaksikeluar" class="nav-link">
-                                <i class="nav-icon far fa-circle text-danger"></i>
-                                <p>Barang Keluar</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 
                 {{-- Menu Laporan --}}
@@ -64,27 +50,13 @@
 
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/transaksi" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Transaksi
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a a href="/transaksimasuk" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Barang Masuk</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/transaksikeluar" class="nav-link">
-                                <i class="nav-icon far fa-circle text-danger"></i>
-                                <p>Barang Keluar</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
                 {{-- Menu Laporan --}}
