@@ -31,7 +31,6 @@
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Transaksi
-                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                 </li>
@@ -54,7 +53,6 @@
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Transaksi
-                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                 </li>
