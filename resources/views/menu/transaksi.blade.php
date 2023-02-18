@@ -6,18 +6,15 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Transaksi Barang</h1>
+                    <h1>Transaksi Barang</h1><br>
+                    <a href="#" class="btn btn-success">Catat Pinjaman</a>
                 </div>
             </div>
         </div>
     </section>
     <section class="content">
         <div class="container-fluid">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Transaksi</h3>
-                        <a href="#" class="float-right btn btn-sm btn-success">Tambah</a>
-                </div>        
+            <div class="card">        
                 {{-- Tabel --}}
                 <div class="card-body p-0">
                     <table class="table table-striped">

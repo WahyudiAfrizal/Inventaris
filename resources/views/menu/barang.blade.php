@@ -1,46 +1,46 @@
 @extends('index')
-@section('halaman','menu barang')
+@section('halaman','Jenis-Jenis Barang')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    Jenis-jenis Barang
-                    <a href="{{ url('/barang/tambah') }}" class="float-right btn btn-sm btn-primary">Tambah</a>
-                </div>
-                <div class="card-body">
-                    @if(Session::has('sukses'))
-                        <div class="alert alert-success">{{ Session::get('sukses') }}</div>
-                    @endif
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                               <th width="1%">No</th>
-                               <th>Nama Barang</th>
-                               <th width="25%" class="text-center">OPSI</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @php
-                            $no = 1;
-                            @endphp
-                            @foreach($barang as $k)
-                                <tr>
-                                    <td>{{ $no++ }}</td>
-                                    <td>{{ $k->NamaBarang }}</td>
-                                    <td class="text-center">
-                                       <a href="{{ url('/barang/edit/'.$k->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                       <a href="{{ url('/barang/hapus/'.$k->id) }}" class="btn btn-sm btn-danger"
-                                    onclick="return confirm('ANDA YAKIN INGIN MENGHAPUSNYA!')">Hapus</a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Jenis-Jenis Barang</h1><br>
+                    <a href="{{ url('/barang/tambah') }}" class="btn btn-success">Create New Barang</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">        
+                {{-- Tabel --}}
+                <div class="card-body p-0">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="1%">No</th>
+                                <th>Nama Barang</th>
+                                <th width="25%" class="text-center">OPSI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($barang as $b)
+                            <tr>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$b->NamaBarang }}</td>
+                                <td class="text-center">
+                                       <a href="{{ url('/barang/edit/'.$b->id) }}" class="btn btn-sm btn-success">Edit</a>
+                                       <a href="{{ url('/barang/hapus/'.$b->id) }}" class="btn btn-sm btn-primary" onclick="return confirm('ANDA YAKIN INGIN MENGHAPUSNYA!')">Hapus</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>                           
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 @endsection

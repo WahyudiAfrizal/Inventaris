@@ -6,14 +6,8 @@
     </ul>
 
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
-                <!-- Authentication Links -->
                 @guest
                     @else
                     <li class="nav-item dropdown">
@@ -35,5 +29,12 @@
                 @endguest
             </ul>
         </div>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </a>
+            </li>
+        </ul>
     </div>
 </nav>
