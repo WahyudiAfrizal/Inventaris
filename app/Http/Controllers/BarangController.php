@@ -17,11 +17,11 @@ class BarangController extends Controller
         return view('menu.barang', ['barang' => $barang]);
     }
 
-    public function index_tambah(){
+    public function create(){
         return view('menu.barang_tambah');
     }
 
-    public function index_aksi(Request $data){
+    public function store(Request $data){
         $data->validate([
             'NamaBarang' => 'required'
         ]);
@@ -30,26 +30,32 @@ class BarangController extends Controller
         Barang::insert([
             'NamaBarang' => $barang
         ]);
-        return redirect('barang')->with("sukses", "Kategori berhasil tersimpan");
+        return redirect('barang');
     }
 
-    public function index_edit($id){
+    public function edit($id){
         $barang=Barang::find($id);
         return view('menu.barang_edit', ['barang' => $barang]);
     }
 
-    public function index_update($id, Request $data){
+    public function update($id, Request $data){
         $data->validate([
-            'NamaBrang' => 'required'
+            'NamaBarang' => 'required',
         ]);
-        $nama_barang = $data->NamaBarang;
+        $barang = $data->NamaBarang;
 
-        // update kategori
         $barang=Barang::find($id);
-        $barang->NamaBarang = $nama_barang;
+        $barang->NamaBarang = $barang;
         $barang->save();
 
-        // alihkan halaman ke halaman kategori
         return redirect('barang');
+    }
+    public function delete($id)
+    {
+        $barang = Barang::find($id);
+        $barang->delete();
+        
+        return redirect('barang');
+        
     }
 }

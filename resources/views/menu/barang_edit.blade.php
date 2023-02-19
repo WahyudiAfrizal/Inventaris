@@ -1,31 +1,30 @@
 @extends('index')
-@section('halaman', 'menu edit')
+@section('halaman','Edit Barang')
 @section('content')
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">
-          Edit Barang
-          <a href="{{ url('/barang') }}" class="float-right btn btn-sm btn-primary">Kembali</a>
-        </div>
-        <div class="card-body">
-          <form method="post" action="{{ url('/barang/update/'.$barang->id) }}">
-            @csrf {{ method_field('PUT') }}
-            <div class="form-group">
-                <label>Nama Barang</label>
-                <input type="text" name="barang" class="form-control" value="{{ $barang->NamaBarang }}">
-                {{-- @if($errors->has('barang'))
-                  <span class="text-danger">
-                    <strong>{{ $errors->first('barang') }}</strong>
-                  </span>
-                @endif --}}
+<div class="wrapper">
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="container-fluid"><br>
+        <div class="col-md-8">
+          <div class="card card-primary">
+            <div class="card-header">
+              Edit Barang
             </div>
-            <input type="submit" class="btn btn-primary" value="Simpan">
-          </form>
+            <div class="card-body">
+              <form method="post" action="{{ url('/barang/update/'.$barang->id) }}">
+                @csrf {{ method_field('PUT') }}
+                <div class="form-group">
+                    <label>Jenis Barang</label>
+                    <input type="text" name="barang" class="form-control" value="{{ $barang->NamaBarang }}">
+                </div>
+                <a href="{{ url('/barang') }}" class="btn btn-sm btn-success">Kembali</a>
+                <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 @endsection

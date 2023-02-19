@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-primary elevation-4" style="background-color: #095642">
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
@@ -10,6 +10,7 @@
                <a style="color: white"><b>INVENTORI</b></a>
             </div>
         </div>
+        <hr style="color: white">
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -17,8 +18,8 @@
                 {{-- Dashboard --}}
                 <li class="nav-item">
                     <a href="/home" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
+                        <i class="nav-icon fas fa-tachometer-alt" style="color: white"></i>
+                        <p style="color: white">
                             Dashboard
                         </p>
                     </a>
@@ -27,8 +28,8 @@
                 {{-- Menu Barang --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-envelope"></i>
-                        <p>
+                        <i class="nav-icon fas fa-envelope" style="color: white"></i>
+                        <p style="color: white">
                             Master
                             <i class="right fas fa-angle-left"></i>
                         </p>
@@ -36,14 +37,18 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                           <a href="/barang" class="nav-link">
-                            <i class="nav-icon far fa-circle text-danger"></i>
-                            <p>Jenis Barang</p>
+                            <i class="nav-icon far fa-circle text-danger" style="color: white"></i>
+                            <p style="color: white">
+                                Jenis Barang
+                            </p>
                           </a>
                         </li>
                         <li class="nav-item">
                           <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-circle text-warning"></i>
-                            <p>Data Barang</p>
+                            <i class="nav-icon far fa-circle text-warning" style="color: white"></i>
+                            <p style="color: white">
+                                Data Barang
+                            </p>
                           </a>
                         </li>
                     </ul>
@@ -52,8 +57,8 @@
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
                     <a href="/transaksi" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>
+                        <i class="nav-icon fas fa-edit" style="color: white"></i>
+                        <p style="color: white">
                             Transaksi
                         </p>
                     </a>
@@ -62,8 +67,8 @@
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
                       <a href="#" class="nav-link">
-                          <i class="nav-icon fas fa-book"></i>
-                          <p>
+                          <i class="nav-icon fas fa-book" style="color: white"></i>
+                          <p style="color: white">
                               Laporan
                           </p>
                       </a>

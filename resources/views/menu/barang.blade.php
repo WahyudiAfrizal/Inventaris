@@ -1,5 +1,5 @@
 @extends('index')
-@section('halaman','Jenis-Jenis Barang')
+@section('halaman','Jenis Barang')
 @section('content')
 <div class="content-wrapper">
     <section class="content-header">
@@ -32,7 +32,7 @@
                                 <td>{{$b->NamaBarang }}</td>
                                 <td class="text-center">
                                        <a href="{{ url('/barang/edit/'.$b->id) }}" class="btn btn-sm btn-success">Edit</a>
-                                       <a href="{{ url('/barang/hapus/'.$b->id) }}" class="btn btn-sm btn-primary" onclick="return confirm('ANDA YAKIN INGIN MENGHAPUSNYA!')">Hapus</a>
+                                       <a href="{{ url('/barang/hapus/'.$b->id) }}" class="btn btn-sm btn-primary" onclick="return confirm('Apakah anda yakin?')">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach
