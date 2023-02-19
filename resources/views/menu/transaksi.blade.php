@@ -21,37 +21,26 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px">No</th>
-                                <th class="text-center" rowspan="2">Tanggal</th>
-                                <th class="text-center" rowspan="2">Nama Barang</th>
-                                <th class="text-center" rowspan="2">Stok</th>
-                                <th class="text-center" colspan="2">jenis</th>
-                                <th class="text-center" rowspan="2">Keterangan</th>
-                                <th class="text-center" rowspan="2" width="13%">OPSI</th>
+                                <th >Tanggal</th>
+                                <th >Jenis Barang</th>
+                                <th >Stok</th>
+                                <th >jenis</th>
+                                <th >Keterangan</th>
+                                <th width="13%">OPSI</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($transaksi as $t)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$t->date('d-m-Y',strtotime($t->Tanggal)) }}</td>
-                                <td>{{$t->NamaBarang}}</td>
-                                <td>{{$t->Stok}}</td>
+                                <td>{{$t->tanggal}}</td>
+                                <td>{{$t->jenis_barang}}</td>
+                                <td>{{$t->stok}}</td>
+                                <td>{{$t->barang_masuk}}</td>
+                                <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
-                                    @if($t->Jenis == "Barang_Masuk")
-                                        {{ "Rp.".number_format($t->nominal).",-" }}
-                                    @else
-                                    @endif
-                                </td>
-                                <td class="text-center">
-                                    @if($t->Jenis == "Barang_Keluar")
-                                        {{ "Rp.".number_format($t->nominal).",-" }}
-                                    @else
-                                    @endif
-                                </td>
-                                <td>{{$t->Keterangan}}</td>
-                                <td class="text-center">
-                                    <a href="{{ url('#'.$k->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="{{ url('#'.$k->id) }}" class="btn btn-sm btn-danger">Hapus</a>
+                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-danger">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach

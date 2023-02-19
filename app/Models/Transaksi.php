@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Transaksi extends Model
 {
     protected $table = "transaksi";
-    protected $fillable = ["Tanggal", "NamaBarang", "Stok", "Jenis","Keterangan"];
+    protected $fillable = ["tanggal", "jenis_barang", "stok", "jenis","keterangan"];
 }

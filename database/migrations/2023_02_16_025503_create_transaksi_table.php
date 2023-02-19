@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('Tanggal');
-            $table->string('NamaBarang');
-            $table->integer('Stok');
-            $table->enum('Jenis',['Barang_Masuk','Barang_Keluar']);
-            $table->text('Keterangan');
+            $table->date('tanggal');
+            $table->string('jenis_barang');
+            $table->integer('stok');
+            $table->enum('jenis',['barang_masuk','barang_keluar']);
+            $table->text('keterangan');
             $table->timestamps();
         });
     }

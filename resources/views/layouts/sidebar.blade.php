@@ -4,10 +4,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-               <img src="{{asset('dist/img/AA.png')}}" class="img-circle elevation-2" alt="User Image">
+               <img src="{{asset('dist/img/box.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-               <a style="color: white"><b>INVENTORI</b></a>
+               <a style="color: white"><b>INVENTORY</b></a>
             </div>
         </div>
         <hr style="color: white">
@@ -78,8 +78,8 @@
                 {{-- Dashboard --}}
                 <li class="nav-item">
                     <a href="/home" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
+                        <i class="nav-icon fas fa-tachometer-alt" style="color: white"></i>
+                        <p style="color: white">
                             Dashboard
                         </p>
                     </a>
@@ -88,8 +88,8 @@
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
                     <a href="/transaksi" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>
+                        <i class="nav-icon fas fa-edit" style="color: white"></i>
+                        <p style="color: white">
                             Transaksi
                         </p>
                     </a>
@@ -98,8 +98,8 @@
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-file"></i>
-                        <p>
+                        <i class="nav-icon fas fa-book" style="color: white"></i>
+                        <p style="color: white">
                             Laporan
                         </p>
                     </a>

@@ -18,44 +18,45 @@ class BarangController extends Controller
     }
 
     public function create(){
-        return view('menu.barang_tambah');
+        return view('menu.barang_create');
     }
 
     public function store(Request $data){
         $data->validate([
-            'NamaBarang' => 'required'
+            'jenis_barang' => 'required'
         ]);
-        $barang = $data->NamaBarang;
+        $barang = $data->jenis_barang;
 
         Barang::insert([
-            'NamaBarang' => $barang
+            'jenis_barang' => $barang
         ]);
-        return redirect('barang');
+        return redirect('barang')->with('success', 'Data berhasil ditambahkan');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $barang=Barang::find($id);
-        return view('menu.barang_edit', ['barang' => $barang]);
+        return view('menu.barang_edit', ['barang' => $barang ]);
     }
 
     public function update($id, Request $data){
         $data->validate([
-            'NamaBarang' => 'required',
+            'jenis_barang' => 'required'
         ]);
-        $barang = $data->NamaBarang;
+        $nama_barang = $data->jenis_barang;
 
         $barang=Barang::find($id);
-        $barang->NamaBarang = $barang;
+        $barang->jenis_barang = $nama_barang;
         $barang->save();
 
-        return redirect('barang');
+        return redirect('barang')->with('success', 'Data berhasil diubah');
     }
     public function delete($id)
     {
         $barang = Barang::find($id);
         $barang->delete();
         
-        return redirect('barang');
+        return redirect('barang')->with('success', 'Data berhasil dihapus');
         
     }
 }

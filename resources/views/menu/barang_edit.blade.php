@@ -15,7 +15,7 @@
                 @csrf {{ method_field('PUT') }}
                 <div class="form-group">
                     <label>Jenis Barang</label>
-                    <input type="text" name="barang" class="form-control" value="{{ $barang->NamaBarang }}">
+                    <input type="text" name="jenis_barang" class="form-control" value="{{ $barang->jenis_barang }}">
                 </div>
                 <a href="{{ url('/barang') }}" class="btn btn-sm btn-success">Kembali</a>
                 <input type="submit" class="btn btn-sm btn-primary" value="Simpan">

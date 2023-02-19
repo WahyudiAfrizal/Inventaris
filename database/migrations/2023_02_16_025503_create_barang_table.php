@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('NamaBarang');
+            $table->string('jenis_barang')->unique();
             $table->timestamps();
         });
     }
