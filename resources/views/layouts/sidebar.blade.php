@@ -77,7 +77,7 @@
                 @elsecan('isPetugas')
                 {{-- Dashboard --}}
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="/home" class="nav-link @yield('dashboard')" >
                         <i class="nav-icon fas fa-tachometer-alt" style="color: white"></i>
                         <p style="color: white">
                             Dashboard
@@ -87,22 +87,22 @@
 
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
-                    <a href="/transaksi" class="nav-link">
+                    <a href="/transaksi" class="nav-link @yield('transaksi')">
                         <i class="nav-icon fas fa-edit" style="color: white"></i>
                         <p style="color: white">
                             Transaksi
                         </p>
                     </a>
                 </li>
-
+                
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
-                    <a href="/laporan" target="_blank" class="nav-link">
-                        <i class="nav-icon fas fa-book" style="color: white"></i>
-                        <p style="color: white">
-                            Laporan
-                        </p>
-                    </a>
+                      <a href="/laporan" class="nav-link @yield('laporan')">
+                          <i class="nav-icon fas fa-book" style="color: white"></i>
+                          <p style="color: white">
+                              Laporan
+                          </p>
+                      </a>
                 </li>
                 @endcan                
             </ul>
