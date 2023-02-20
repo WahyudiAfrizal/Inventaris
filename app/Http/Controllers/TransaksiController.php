@@ -46,6 +46,6 @@ class TransaksiController extends Controller
             'keterangan'=>$data->keterangan
         ]);
 
-        return redirect('transaksi');
+        return redirect('transaksi')->with('status','Data berhasil ditambahkan');
     }
 }

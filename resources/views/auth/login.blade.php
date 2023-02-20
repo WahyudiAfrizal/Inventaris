@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
 
 </head>
-<body class="hold-transition login-page" style="background-color: rgb(97, 130, 213)">
+<body class="hold-transition login-page" style="background-color:  #095642">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card"> <br>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-success btn-block">Sign In</button>
           </div>
         </div>
       </form>

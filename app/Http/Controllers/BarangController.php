@@ -31,7 +31,7 @@ class BarangController extends Controller
         Barang::insert([
             'jenis_barang' => $barang
         ]);
-        return redirect('barang')->with('success', 'Data berhasil ditambahkan');
+        return redirect('/barang')->with('status', 'Data berhasil ditambahkan');
     }
 
     public function edit($id)
@@ -50,14 +50,14 @@ class BarangController extends Controller
         $barang->jenis_barang = $nama_barang;
         $barang->save();
 
-        return redirect('barang')->with('success', 'Data berhasil diubah');
+        return redirect('/barang')->with('status', 'Data berhasil diubah');
     }
     public function delete($id)
     {
         $barang = Barang::find($id);
         $barang->delete();
         
-        return redirect('barang')->with('success', 'Data berhasil dihapus');
+        return redirect('/barang')->with('status', 'Data berhasil dihapus');
         
     }
 
@@ -85,7 +85,7 @@ class BarangController extends Controller
             'jenis_barang' =>$data->jenis_barang,
             'stok' =>$data->stok
         ]);
-        return redirect('data')->with('success', 'Data berhasil ditambahkan');
+        return redirect('/data')->with('status', 'Data berhasil ditambahkan');
     }
 
     public function data_edit($id){
@@ -111,12 +111,12 @@ class BarangController extends Controller
         $data_barang->stok = $d_stok;
         $data_barang->save();
 
-        return redirect('data');
+        return redirect('/data')->with('status', 'Data berhasil diubah');
     }
     public function data_delete($id){
         $data_barang = DataBarang::find($id);
         $data_barang->delete();
 
-        return redirect('data')->with("Success", "Data berhasil dihapus");
+        return redirect('/data')->with('status', 'Data berhasil dihapus');
     }
 }

@@ -17,7 +17,13 @@
         <div class="container-fluid">
             <div class="card">        
                 {{-- Tabel --}}
-                <div class="card-body p-0">
+                <div class="card-body">
+                    {{-- pesan menggunakan alert --}}
+                    @if(Session::has('status'))
+                    <div class="alert alert-success">
+                        {{ Session::get('status') }}
+                    </div>
+                    @endif
                     <table class="table table-striped">
                         <thead>
                             <tr>
