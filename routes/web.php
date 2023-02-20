@@ -3,7 +3,6 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BarangController;
-use App\Models\Transaksi;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 

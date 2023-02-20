@@ -1,5 +1,7 @@
 @extends('index')
 
+@section('halaman','Dashboard')
+@section('dashboard','active')
 @section('content')
 <div class="content-wrapper">
     <div class="content-header">

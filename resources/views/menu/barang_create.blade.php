@@ -1,5 +1,5 @@
 @extends('index')
-@section('halaman','tambah barang')
+@section('halaman','Input Barang')
 @section('content')
 <div class="wrapper">
     <div class="content-wrapper">

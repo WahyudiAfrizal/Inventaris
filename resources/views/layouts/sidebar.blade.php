@@ -17,7 +17,7 @@
                 @can('isSuperAdmin')
                 {{-- Dashboard --}}
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="/home" class="nav-link @yield('dashboard')" >
                         <i class="nav-icon fas fa-tachometer-alt" style="color: white"></i>
                         <p style="color: white">
                             Dashboard
@@ -27,7 +27,7 @@
                 
                 {{-- Menu Barang --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link @yield('master')">
                         <i class="nav-icon fas fa-envelope" style="color: white"></i>
                         <p style="color: white">
                             Master
@@ -36,7 +36,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                          <a href="/barang" class="nav-link">
+                          <a href="/barang" class="nav-link @yield('jenis')">
                             <i class="nav-icon far fa-circle text-info" style="color: white"></i>
                             <p style="color: white">
                                 Jenis Barang
@@ -44,7 +44,7 @@
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a href="/data" class="nav-link">
+                          <a href="/data" class="nav-link @yield('data')">
                             <i class="nav-icon far fa-circle text-primary" style="color: white"></i>
                             <p style="color: white">
                                 Data Barang
@@ -56,7 +56,7 @@
 
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
-                    <a href="/transaksi" class="nav-link">
+                    <a href="/transaksi" class="nav-link @yield('transaksi')">
                         <i class="nav-icon fas fa-edit" style="color: white"></i>
                         <p style="color: white">
                             Transaksi
@@ -66,7 +66,7 @@
                 
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
-                      <a href="/laporan" target="_blank" class="nav-link">
+                      <a href="/laporan" target="_blank" class="nav-link @yield('laporan')">
                           <i class="nav-icon fas fa-book" style="color: white"></i>
                           <p style="color: white">
                               Laporan
