@@ -66,7 +66,7 @@
                 
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
-                      <a href="/laporan" class="nav-link">
+                      <a href="/laporan" target="_blank" class="nav-link">
                           <i class="nav-icon fas fa-book" style="color: white"></i>
                           <p style="color: white">
                               Laporan
@@ -97,7 +97,7 @@
 
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
-                    <a href="/laporan" class="nav-link">
+                    <a href="/laporan" target="_blank" class="nav-link">
                         <i class="nav-icon fas fa-book" style="color: white"></i>
                         <p style="color: white">
                             Laporan

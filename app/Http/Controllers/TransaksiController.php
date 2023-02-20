@@ -18,6 +18,11 @@ class TransaksiController extends Controller
         return view('menu.transaksi', ['transaksi' => $transaksi]);
     }
 
+    public function cetak_laporan(){
+        $transaksi = Transaksi::all();
+        return view('menu.laporan', ['transaksi' => $transaksi]);
+    }
+
     public function transaksi_tambah()
     {
         $transaksi = Transaksi::all();

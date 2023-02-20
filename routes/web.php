@@ -29,3 +29,4 @@ Route::post('/data/store',          [BarangController::class, 'data_store']);
 Route::get('/transaksi',            [TransaksiController::class, 'index']);
 Route::get('/transaksi/tambah',     [TransaksiController::class, 'transaksi_tambah']);
 Route::post('/transaksi/aksi',      [TransaksiController::class, 'transaksi_aksi']);
+Route::get('/laporan',              [TransaksiController::class, 'cetak_laporan']);

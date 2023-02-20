@@ -9,7 +9,7 @@
 <body>
     <div class="form-group">
         <P align="center"><b>Laporan Data Inventaris</b></P>
-        <table class="static" align="center" rules="all" border="1px" style="width:10cm">
+        <table class="static" align="center" rules="all" border="1px" style="width:20cm">
             {{-- tabel header --}}
             <thead>
                 <tr>
@@ -26,9 +26,9 @@
                 <tr>
                     <td>{{$loop->iteration}}</td>
                     <td>{{$t->tanggal}}</td>
-                    <td>{{$t->jenis_barang}}</td>
+                    <td>{{$t->nama_barang}}</td>
                     <td>{{$t->stok}}</td>
-                    <td>{{$t->barang_masuk}}</td>
+                    <td>{{$t->jenis}}</td>
                     <td>{{$t->keterangan}}</td>
                 </tr>
                 @endforeach
