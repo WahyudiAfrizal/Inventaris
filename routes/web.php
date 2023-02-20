@@ -25,6 +25,9 @@ Route::get('/barang/delete/{id}',   [BarangController::class, 'delete']);
 Route::get('/data',                 [BarangController::class, 'index_data']);
 Route::get('/data/create',          [BarangController::class, 'data_create']);
 Route::post('/data/store',          [BarangController::class, 'data_store']);
+Route::get('data/edit/{id}',        [BarangController::class, 'data_edit']);
+Route::put('data/update/{id}',      [BarangController::class, 'data_update']);
+
 
 Route::get('/transaksi',            [TransaksiController::class, 'index']);
 Route::get('/transaksi/tambah',     [TransaksiController::class, 'transaksi_tambah']);
