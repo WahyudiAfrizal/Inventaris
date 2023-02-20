@@ -23,3 +23,4 @@ Route::put('/barang/update/{id}',   [BarangController::class, 'update']);
 Route::get('/barang/delete/{id}',   [BarangController::class, 'delete']);
 
 Route::get('/transaksi',            [TransaksiController::class, 'index']);
+Route::get('/transaksi/tambah',     [TransaksiController::class, 'transaksi_tambah']);
