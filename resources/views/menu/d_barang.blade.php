@@ -7,7 +7,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Data Barang</h1><br>
-                    <a href="{{ url('/data/create') }}" class="btn btn-success">Create data Barang</a>
+                    <a href="{{ url('/data/create') }}" class="btn btn-success">Create Data Barang</a>
                 </div>
             </div>
         </div>
