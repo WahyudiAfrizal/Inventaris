@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
 
 </head>
-<body class="hold-transition login-page" style="background-color:  #095642">
+<body class="hold-transition login-page" style="background-color:  #268169">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card"> <br>

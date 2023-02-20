@@ -66,7 +66,7 @@
                 
                 {{-- Menu Laporan --}}
                 <li class="nav-item">
-                      <a href="/laporan" target="_blank" class="nav-link @yield('laporan')">
+                      <a href="/laporan" class="nav-link @yield('laporan')">
                           <i class="nav-icon fas fa-book" style="color: white"></i>
                           <p style="color: white">
                               Laporan
