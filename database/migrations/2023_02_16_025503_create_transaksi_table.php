@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('transaksi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('tanggal');
-            $table->string('jenis_barang');
+            $table->string('nama_barang');
             $table->integer('stok');
-            $table->enum('jenis',['barang_masuk','barang_keluar']);
+            $table->enum('jenis',['barang masuk','barang keluar']);
             $table->text('keterangan');
             $table->timestamps();
         });

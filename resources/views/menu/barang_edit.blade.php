@@ -5,10 +5,9 @@
   <div class="content-wrapper">
     <section class="content">
       <div class="container-fluid"><br>
-        <div class="col-md-8">
-          <div class="card card-primary">
-            <div class="card-header">
-              Edit Barang
+          <div class="card">
+            <div class="card-header" style="background-color:  #095642">
+              <h5 style="color:white">Edit Barang</h5>
             </div>
             <div class="card-body">
               <form method="post" action="{{ url('/barang/update/'.$barang->id) }}">
@@ -22,7 +21,6 @@
               </form>
             </div>
           </div>
-        </div>
       </div>
     </section>
   </div>

@@ -28,24 +28,17 @@ class TransaksiController extends Controller
     {
         $data->validate([
             'tanggal' => 'required',
-            'jenis_barang'=> 'required',
-            'stok' => 'required | integer',
+            'nama_barang'=> 'required',
+            'stok' => 'required|integer',
             'jenis' => 'required',
             'keterangan' => 'required'
         ]);
-
-        $transaksi = $data->tanggal;
-        $transaksi = $data->jenis_barang;
-        $transaksi = $data->stok;
-        $transaksi = $data->jenis;
-        $transaksi = $data->keterangan;
-
         Transaksi::insert([
-            'tanggal'=>$transaksi,
-            'jenis_barang'=>$transaksi,
-            'stok'=>$transaksi,
-            'jenis'=>$transaksi,
-            'keterangan'=>$transaksi
+            'tanggal'=>$data->tanggal,
+            'nama_barang'=>$data->nama_barang,
+            'stok'=>$data->stok,
+            'jenis'=>$data->jenis,
+            'keterangan'=>$data->keterangan
         ]);
 
         return redirect('transaksi');

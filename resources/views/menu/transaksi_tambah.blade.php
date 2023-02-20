@@ -5,10 +5,9 @@
   <div class="content-wrapper">
     <section class="content">
       <div class="container-fluid"><br>
-        <div class="col-md-8">
-          <div class="card card-primary">
-            <div class="card-header">
-              Input transaksi
+          <div class="card">
+            <div class="card-header" style="background-color:  #095642">
+              <h5 style="color: white">Input Transaksi</h5>
           </div>
           <div class="card-body">
               <form method="post" action="/transaksi/aksi">
@@ -21,7 +20,7 @@
                   <input type="text" name="nama_barang" class="form-control">
                   <br>
                   <label>Stok</label>
-                  <input type="number" name="stok" class="form-control">
+                  <input type="integer" name="stok" class="form-control">
                   <br>
                   <label>Jenis</label>
                   <select class="form-control" name="jenis">
@@ -38,7 +37,6 @@
               </form>
           </div>
           </div>
-        </div>
       </div>
     </section>
   </div>

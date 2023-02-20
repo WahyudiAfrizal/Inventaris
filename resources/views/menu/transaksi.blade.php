@@ -39,8 +39,8 @@
                                 <td>{{$t->jenis}}</td>
                                 <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
-                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-danger">Hapus</a>
+                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-success">Edit</a>
+                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-primary">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach
