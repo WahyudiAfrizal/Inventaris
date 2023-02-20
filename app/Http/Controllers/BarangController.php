@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Barang;
+use App\Models\DataBarang;
 
 class BarangController extends Controller
 {
@@ -58,5 +59,32 @@ class BarangController extends Controller
         
         return redirect('barang')->with('success', 'Data berhasil dihapus');
         
+    }
+
+    // controller data barang
+
+    public function index_data(){
+        $data_barang = DataBarang::all();
+        return view('menu.d_barang', ['data_barang' => $data_barang]);
+    }
+
+    public function data_create(){
+        $barang = Barang::all();
+        return view('menu.d_barang_create', ['barang' => $barang]);
+    }
+
+    public function data_store(Request $data){
+        $data->validate([
+            'nama_barang' => 'required',
+            'jenis_barang' => 'required',
+            'stok' => 'required|integer'
+        ]);
+
+        DataBarang::insert([
+            'nama_barang' =>$data->nama_barang,
+            'jenis_barang' =>$data->jenis_barang,
+            'stok' =>$data->stok
+        ]);
+        return redirect('data')->with('success', 'Data berhasil ditambahkan');
     }
 }

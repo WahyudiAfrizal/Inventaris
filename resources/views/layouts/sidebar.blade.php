@@ -44,7 +44,7 @@
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a href="#" class="nav-link">
+                          <a href="/data" class="nav-link">
                             <i class="nav-icon far fa-circle text-warning" style="color: white"></i>
                             <p style="color: white">
                                 Data Barang
