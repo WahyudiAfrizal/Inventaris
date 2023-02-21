@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BarangController;
+use App\Models\Transaksi;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,6 +33,7 @@ Route::get('data/delete/{id}',      [BarangController::class, 'data_delete']);
 Route::get('/transaksi',            [TransaksiController::class, 'index']);
 Route::get('/transaksi/tambah',     [TransaksiController::class, 'transaksi_tambah']);
 Route::post('/transaksi/aksi',      [TransaksiController::class, 'transaksi_aksi']);
+Route::get('transaksi/hapus/{id}',  [TransaksiController::class, 'transaksi_hapus']);
 
 Route::get('/laporan',              [TransaksiController::class, 'laporan']);
 Route::get('/cetak',                [TransaksiController::class, 'cetak']);

@@ -19,10 +19,10 @@
                   <label>Nama Barang</label>
                   <input type="text" name="nama_barang" class="form-control">
                   <br>
-                  <label>Stok</label>
+                  <label>Jumlah</label>
                   <input type="integer" name="stok" class="form-control">
                   <br>
-                  <label>Jenis</label>
+                  <label>Jenis Transaksi</label>
                   <select class="form-control" name="jenis">
                       <option value="">- Pilih Jenis</option>
                       <option value="Barang Masuk">Barang Masuk</option>

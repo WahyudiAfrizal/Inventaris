@@ -30,8 +30,8 @@
                                 <th style="width: 10px">No</th>
                                 <th >Tanggal</th>
                                 <th >Nama Barang</th>
-                                <th >Stok</th>
-                                <th >Jenis</th>
+                                <th >Jumlah</th>
+                                <th >Jenis Transaksi</th>
                                 <th >Keterangan</th>
                                 <th width="13%" class="text-center">OPSI</th>
                             </tr>
@@ -46,8 +46,8 @@
                                 <td>{{$t->jenis}}</td>
                                 <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
-                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-success">Edit</a>
-                                    <a href="{{ url('#'.$t->id) }}" class="btn btn-sm btn-primary">Hapus</a>
+                                    <a href="{{ url('/transaksi/hapus/'.$t->id) }}" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach

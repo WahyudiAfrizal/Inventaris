@@ -52,4 +52,12 @@ class TransaksiController extends Controller
 
         return redirect('transaksi')->with('status','Data berhasil ditambahkan');
     }
+
+    public function transaksi_hapus($id)
+    {
+        $transaksi = Transaksi::find($id);
+        $transaksi->delete();
+
+        return redirect('transaksi')->with('Sukses', 'Transaksi berhasil dihapus');
+    }
 }
