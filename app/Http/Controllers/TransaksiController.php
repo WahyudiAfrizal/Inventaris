@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Barang;
+use App\Models\DataBarang;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
@@ -18,19 +18,10 @@ class TransaksiController extends Controller
         return view('menu.transaksi', ['transaksi' => $transaksi]);
     }
 
-    public function laporan(){
-        $transaksi = Transaksi::all();
-        return view('menu.laporan', ['transaksi' => $transaksi]);
-    }
-    public function cetak(){
-        $transaksi = Transaksi::all();
-        return view('menu.cetak', ['transaksi' => $transaksi]);
-    }
-
     public function transaksi_tambah()
     {
-        $transaksi = Transaksi::all();
-        return view('menu.transaksi_tambah', ['transaksi'=> $transaksi]);
+        $data_barang = DataBarang::all();
+        return view('menu.transaksi_tambah', ['data_barang' => $data_barang]);
     }
 
     public function transaksi_aksi(Request $data)
@@ -50,7 +41,7 @@ class TransaksiController extends Controller
             'keterangan'=>$data->keterangan
         ]);
 
-        return redirect('transaksi')->with('status','Data berhasil ditambahkan');
+        return redirect('/transaksi')->with('status','Data berhasil ditambahkan');
     }
 
     public function transaksi_hapus($id)
@@ -59,5 +50,14 @@ class TransaksiController extends Controller
         $transaksi->delete();
 
         return redirect('transaksi')->with('Sukses', 'Transaksi berhasil dihapus');
+    }
+
+    public function laporan(){
+        $transaksi = Transaksi::all();
+        return view('menu.laporan', ['transaksi' => $transaksi]);
+    }
+    public function cetak(){
+        $transaksi = Transaksi::all();
+        return view('menu.cetak', ['transaksi' => $transaksi]);
     }
 }

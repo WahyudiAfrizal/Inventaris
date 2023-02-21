@@ -40,7 +40,7 @@
                             @foreach ($transaksi as $t)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$t->tanggal}}</td>
+                                <td>{{ date('d-m-Y',strtotime($t->tanggal)) }}</td>
                                 <td>{{$t->nama_barang}}</td>
                                 <td>{{$t->stok}}</td>
                                 <td>{{$t->jenis}}</td>

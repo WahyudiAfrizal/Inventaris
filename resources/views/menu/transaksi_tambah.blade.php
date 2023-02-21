@@ -17,7 +17,12 @@
                   <input type="date" name="tanggal" class="form-control"> 
                   <br>
                   <label>Nama Barang</label>
-                  <input type="text" name="nama_barang" class="form-control">
+                  <select class="form-control" name="nama_barang">
+                    <option value="">- Pilih Barang</option>
+                    @foreach($data_barang as $k)
+                        <option value="{{ $k->nama_barang }}">{{ $k->nama_barang }}</option>
+                    @endforeach
+                  </select>
                   <br>
                   <label>Jumlah</label>
                   <input type="integer" name="stok" class="form-control">

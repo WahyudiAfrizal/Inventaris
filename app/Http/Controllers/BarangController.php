@@ -89,8 +89,10 @@ class BarangController extends Controller
     }
 
     public function data_edit($id){
+        $barang = Barang::all();
         $data_barang = DataBarang::find($id);
         return view('menu.d_barang_edit', [
+            'barang' => $barang,
             'data_barang' => $data_barang
         ]);
     }
@@ -99,16 +101,13 @@ class BarangController extends Controller
         $data->validate([
             'nama_barang' => 'required',
             'jenis_barang' => 'required',
-            'stok' => 'required|integer'
         ]);
         $d_nama = $data->nama_barang;
         $d_jenis = $data->jenis_barang;
-        $d_stok = $data->stok;
 
         $data_barang = DataBarang::find($id);
         $data_barang->nama_barang = $d_nama;
         $data_barang->jenis_barang = $d_jenis;
-        $data_barang->stok = $d_stok;
         $data_barang->save();
 
         return redirect('/data')->with('status', 'Data berhasil diubah');
