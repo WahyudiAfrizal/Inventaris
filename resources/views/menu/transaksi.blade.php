@@ -9,7 +9,6 @@
                 <div class="col-sm-6">
                     <h1>Transaksi Barang</h1><br>
                     <a href="/transaksi/tambah" class="btn btn-success">Input Transaksi</a>
-                    <a href="/cetak" target="_blank" class=" btn btn-primary">Cetak Laporan</a>
                 </div>
             </div>
         </div>

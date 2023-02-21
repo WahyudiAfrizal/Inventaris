@@ -2,14 +2,21 @@
 @section('halaman','Laporan')
 @section('laporan','active')
 @section('content')
-<div class="wrapper">
-    <div class="content-wrapper">
-      <section class="content">
-        <body>
-            <div class="form-group"><br><br>
-                <P align="center"><b>Laporan Data Inventaris</b></P>
-                <table class="static" align="center" rules="all" border="1px" style="width:20cm">
-                    {{-- tabel header --}}
+<div class="content-wrapper">
+    <section class="content">
+        <div class="content-header">
+            <div class="container-fluid">
+              <div class="row mb-2">
+                <div class="col-sm-8">
+                  <h3 style="color: rgb(141, 139, 139)">laporan Transaksi</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                  <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th style="width: 10px">No</th>
@@ -32,11 +39,10 @@
                         </tr>
                         @endforeach
                     </tbody>
-                </table>
+                </table><br>
+                <a href="/cetak" target="_blank" class="float-right btn btn-primary">Print</a>
             </div>
-        </body>
-        <a href="/cetak" target="_blank" class="float-right btn btn-danger">print</a>
+        </div>
     </section>
-    </div>
-</div>   
+</div>  
 @endsection
