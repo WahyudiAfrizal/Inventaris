@@ -37,8 +37,8 @@
                   <label>Keterangan</label>
                   <textarea class="form-control" name="keterangan"></textarea>
               </div>
-              <a href="/transaksi" class="btn btn-info">Kembali</a>
-              <input type="submit" class="btn btn-primary" value="Simpan">
+              <a href="/transaksi" class="btn bg-gradient-success btn-sm">Kembali</a>
+              <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
               </form>
           </div>
           </div>

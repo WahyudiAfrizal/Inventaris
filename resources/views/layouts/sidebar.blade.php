@@ -57,7 +57,7 @@
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
                     <a href="/transaksi" class="nav-link @yield('transaksi')">
-                        <i class="nav-icon fas fa-edit" style="color: white"></i>
+                        <i class="nav-icon fas fa-briefcase" style="color: white"></i>
                         <p style="color: white">
                             Transaksi
                         </p>

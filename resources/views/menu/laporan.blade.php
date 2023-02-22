@@ -40,7 +40,8 @@
                         @endforeach
                     </tbody>
                 </table><br>
-                <a href="/cetak" target="_blank" class="float-right btn btn-primary">Print</a>
+                <a href="/cetak" target="_blank" class="float-right btn bg-gradient-primary btn-sx">
+                  <i class="fas fa-print"></i> Print</a>
             </div>
         </div>
     </section>

@@ -9,7 +9,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Data Barang</h1><br>
-                    <a href="{{ url('/data/create') }}" class="btn btn-info">Create Data Barang</a>
+                    <a href="{{ url('/data/create') }}" class="btn  bg-gradient-primary btn-xs">Create Data Barang</a>
                 </div>
             </div>
         </div>
@@ -43,8 +43,8 @@
                                 <td>{{$d->jenis_barang}}</td>
                                 <td>{{$d->stok}}</td>
                                 <td class="text-center">
-                                       <a href="{{ url('/data/edit/'.$d->id) }}" class="btn btn-sm btn-info">Edit</a>
-                                       <a href="{{ url('/data/delete/'.$d->id) }}" class="btn btn-sm btn-primary" onclick="return confirm('Apakah anda yakin untuk menghapus?')">Hapus</a>
+                                       <a href="{{ url('/data/edit/'.$d->id) }}" class="btn  bg-gradient-info btn-sm">Edit</a>
+                                       <a href="{{ url('/data/delete/'.$d->id) }}" class="btn  bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin untuk menghapus?')">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach

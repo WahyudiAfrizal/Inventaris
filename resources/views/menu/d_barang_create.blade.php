@@ -27,8 +27,8 @@
                                 <label>Stok</label>
                                     <input type="integer" name="stok" class="form-control">
                             </div>
-                            <a href="/data" class="btn btn-sm btn-info">Kembali</a>
-                            <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+                            <a href="/data" class="btn bg-gradient-success btn-sm">Kembali</a>
+                            <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
                         </form>
                     </div>
                 </div>

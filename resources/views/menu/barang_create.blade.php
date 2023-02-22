@@ -20,8 +20,8 @@
                                 </span>
                                 @endif
                             </div>
-                            <a href="/barang" class="btn btn-sm btn-info">Kembali</a>
-                            <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+                            <a href="/barang" class="btn bg-gradient-success btn-sm">Kembali</a>
+                            <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
                         </form>
                     </div>
                 </div>

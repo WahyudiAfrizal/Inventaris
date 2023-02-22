@@ -6,7 +6,7 @@
         <section class="content">
             <div class="container-fluid"><br>
                 <div class="card">
-                    <div class="card-header" style="background-color: #0b507b"">
+                    <div class="card-header" style="background-color: #0b507b">
                         <h5 style="color: white">Edit Data Barang</h5>
                     </div>
                     <div class="card-body">
@@ -23,8 +23,8 @@
                                 @endforeach
                             </select>                           
                         </div>
-                        <a href="{{ url('/data') }}" class="btn btn-sm btn-info">Kembali</a>
-                        <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
+                        <a href="{{ url('/data') }}" class="btn bg-gradient-success btn-sm">Kembali</a>
+                        <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
                         </form>
                     </div>
                 </div>
