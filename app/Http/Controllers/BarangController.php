@@ -113,13 +113,20 @@ class BarangController extends Controller
     public function data_update($id, Request $data){
         $data->validate([
             'nama_barang' => 'required',
+            'foto' => 'required|image|mimes:jpg,png',
             'jenis_barang' => 'required',
         ]);
+        $foto = $data->foto;
+        $slug = Str::slug($foto->getClientOriginalName());
+        $new_foto = time() .'_'. $slug;
+        $foto->move('edit/barang',$new_foto);
+
         $d_nama = $data->nama_barang;
         $d_jenis = $data->jenis_barang;
 
         $data_barang = DataBarang::find($id);
         $data_barang->nama_barang = $d_nama;
+        $data_barang->foto  = 'edit/barang/'.$new_foto;
         $data_barang->jenis_barang = $d_jenis;
         $data_barang->save();
 

@@ -21,7 +21,7 @@
                                     <div class="error" style="color:#CD0404"><b>Nama barang sudah ada</b></div>
                                 @enderror
                                 <br>
-                                <label>Masukkan Foto</label>
+                                <label>Foto Barang</label>
                                 <input type="file" name="foto" class="form-control" 
                                  accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
                                  <div class="mt-3"><img src="" id="output" width="150"></div>
