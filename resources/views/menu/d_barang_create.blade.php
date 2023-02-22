@@ -15,6 +15,9 @@
                             <div class="form-group">
                                 <label>Nama Barang</label>
                                 <input type="text" name="nama_barang" class="form-control">
+                                @error('nama_barang')
+                                    <div class="error" style="color:#CD0404"><b>Nama barang sudah ada</b></div>
+                                @enderror
                                 <br>
                                 <label>Jenis Barang</label>
                                 <select class="form-control" name="jenis_barang">
@@ -26,6 +29,9 @@
                                 <br>
                                 <label>Stok</label>
                                     <input type="integer" name="stok" class="form-control">
+                                    @error('stok')
+                                        <div class="error" style="color:#CD0404"><b>Input dengan angka</b></div>
+                                    @enderror
                             </div>
                             <a href="/data" class="btn bg-gradient-success btn-sm">Kembali</a>
                             <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">

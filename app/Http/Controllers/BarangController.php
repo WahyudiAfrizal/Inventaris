@@ -78,7 +78,7 @@ class BarangController extends Controller
 
     public function data_store(Request $data){
         $data->validate([
-            'nama_barang' => 'required',
+            'nama_barang' => 'required|unique:data_barang,nama_barang',
             'jenis_barang' => 'required',
             'stok' => 'required|integer'
         ]);

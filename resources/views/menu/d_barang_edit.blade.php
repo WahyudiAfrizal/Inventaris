@@ -15,13 +15,12 @@
                         <div class="form-group">
                             <label>Nama Barang</label>
                             <input type="text" name="nama_barang" class="form-control" value="{{ $data_barang->nama_barang }}">
-                            <label>Jenis Barang</label>
+                            <label>Jenis Barang</label>        
                             <select class="form-control" name="jenis_barang">
-                                <option value="">- Pilih Jenis Barang</option>
-                                @foreach($barang as $k)
-                                    <option value="{{ $k->jenis_barang }}">{{ $k->jenis_barang }}</option>
+                                @foreach($barang as $b)
+                                    <option value="{{ $b->jenis_barang }}" {{ $b->jenis_barang == $b->jenis_barang ? 'selected' : '' }}>{{ $b->jenis_barang }}</option>
                                 @endforeach
-                            </select>                           
+                            </select>                   
                         </div>
                         <a href="{{ url('/data') }}" class="btn bg-gradient-success btn-sm">Kembali</a>
                         <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">

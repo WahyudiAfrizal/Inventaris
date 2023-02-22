@@ -14,11 +14,9 @@
                             @csrf
                             <div class="form-group">
                                 <input type="text" name="jenis_barang" class="form-control">
-                                @if($errors->has('jenis_barang'))
-                                <span class="text-danger">
-                                    <strong>{{ $errors->first('jenis_barang') }}</strong>
-                                </span>
-                                @endif
+                                @error('jenis_barang')
+                                    <div class="error" style="color:#CD0404"><b>Jenis barang sudah ada</b></div>
+                                @enderror
                             </div>
                             <a href="/barang" class="btn bg-gradient-success btn-sm">Kembali</a>
                             <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
