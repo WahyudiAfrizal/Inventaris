@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Barang;
 use App\Models\DataBarang;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
+
 
 class BarangController extends Controller
 {
@@ -79,15 +81,23 @@ class BarangController extends Controller
     public function data_store(Request $data){
         $data->validate([
             'nama_barang' => 'required|unique:data_barang,nama_barang',
+            'foto' => 'required|image|mimes:jpg,png',
             'jenis_barang' => 'required',
             'stok' => 'required|integer'
         ]);
 
-        DataBarang::insert([
-            'nama_barang' =>$data->nama_barang,
-            'jenis_barang' =>$data->jenis_barang,
-            'stok' =>$data->stok
-        ]);
+        $foto = $data->foto;
+        $slug = Str::slug($foto->getClientOriginalName());
+        $new_foto = time() .'_'. $slug;
+        $foto->move('uploads/barang',$new_foto);
+
+         $barang = new DataBarang;
+         $barang->nama_barang = $data->nama_barang;
+         $barang->foto  = 'uploads/barang/'.$new_foto;
+         $barang->jenis_barang = $data->jenis_barang;
+         $barang->stok = $data->stok;
+         $barang->save();
+        
         return redirect('/data')->with('status', 'Data berhasil ditambahkan');
     }
 

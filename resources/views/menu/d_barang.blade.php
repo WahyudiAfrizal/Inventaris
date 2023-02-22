@@ -30,6 +30,7 @@
                             <tr>
                                 <th width="1%">No</th>
                                 <th>Nama Barang</th>
+                                <th>Foto Barang</th>
                                 <th>Jenis Barang</th>
                                 <th>Stok</th>
                                 <th width="25%" class="text-center">OPSI</th>
@@ -40,6 +41,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$d->nama_barang }}</td>
+                                <td><img src="{{ asset($d->foto)}}" width="50"></td>
                                 <td>{{$d->jenis_barang}}</td>
                                 <td>{{$d->stok}}</td>
                                 <td class="text-center">
