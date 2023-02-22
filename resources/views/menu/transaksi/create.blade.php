@@ -38,8 +38,8 @@
                   <label>Keterangan</label>
                   <textarea class="form-control" name="keterangan"></textarea>
               </div>
-              <a href="/transaksi" class="btn bg-gradient-danger btn-sm"><i class="bi bi-arrow-clockwise">></i></a>
-              <input type="submit" class="btn bg-gradient-primary btn-sm" value="Save">
+              <a href="/transaksi" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>
+              <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Save</i></button>
               </form>
           </div>
           </div>

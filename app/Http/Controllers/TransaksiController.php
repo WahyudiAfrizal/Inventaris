@@ -49,6 +49,6 @@ class TransaksiController extends Controller
         $transaksi = Transaksi::find($id);
         $transaksi->delete();
 
-        return redirect('transaksi')->with('Sukses', 'Transaksi berhasil dihapus');
+        return redirect('transaksi')->with('status', 'Transaksi berhasil dihapus');
     }
 }

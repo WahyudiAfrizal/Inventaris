@@ -44,7 +44,7 @@
                                        <a href="{{ url('/barang/edit/'.$b->id) }}" class="btn bg-gradient-warning btn-sm">
                                         <i class="bi bi-pencil-square"></i> Edit</a>
                                        <a href="{{ url('/barang/delete/'.$b->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
-                                        <i class="bi bi-trash"></i> Delate</a>
+                                        <i class="bi bi-trash"></i> Delete</a>
                                 </td>
                             </tr>
                             @endforeach
