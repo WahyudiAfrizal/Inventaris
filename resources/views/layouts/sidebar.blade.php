@@ -45,7 +45,7 @@
                         </li>
                         <li class="nav-item">
                           <a href="/data" class="nav-link @yield('data')">
-                            <i class="nav-icon far fa-circle text-primary" style="color: white"></i>
+                            <i class="nav-icon far fa-circle text-info" style="color: white"></i>
                             <p style="color: white">
                                 Data Barang
                             </p>

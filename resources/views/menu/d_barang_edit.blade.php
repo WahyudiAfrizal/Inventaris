@@ -1,5 +1,7 @@
 @extends('index')
 @section('halaman','Edit Data Barang')
+@section('master','active')
+@section('data','active')
 @section('content')
 <div class="wrapper">
     <div class="content-wrapper">
@@ -18,7 +20,7 @@
                             <label>Jenis Barang</label>        
                             <select class="form-control" name="jenis_barang">
                                 @foreach($barang as $b)
-                                    <option value="{{ $b->jenis_barang }}" {{ $b->jenis_barang == $b->jenis_barang ? 'selected' : '' }}>{{ $b->jenis_barang }}</option>
+                                    <option value="{{ $b->jenis_barang }}" {{ $b->jenis_barang == $data_barang->jenis_barang ? 'selected' : '' }}>{{ $b->jenis_barang }}</option>
                                 @endforeach
                             </select>                   
                         </div>

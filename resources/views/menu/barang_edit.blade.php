@@ -1,5 +1,7 @@
 @extends('index')
 @section('halaman','Edit Barang')
+@section('master','active')
+@section('jenis','active')
 @section('content')
 <div class="wrapper">
   <div class="content-wrapper">
