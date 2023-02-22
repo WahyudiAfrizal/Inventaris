@@ -25,7 +25,7 @@ class BarangController extends Controller
 
     public function store(Request $data){
         $data->validate([
-            'jenis_barang' => 'required|unique:barang,jenis_barang'
+            'jenis_barang' => 'required|unique:barang,jenis_barang,'
         ]);
         
         $barang = $data->jenis_barang;
