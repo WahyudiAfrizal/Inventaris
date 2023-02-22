@@ -11,7 +11,7 @@
               <h5 style="color: white">Input Transaksi</h5>
           </div>
           <div class="card-body">
-              <form method="post" action="/transaksi/aksi">
+              <form method="post" action="/transaksi/store">
               @csrf
               <div class="form-group">
                   <label>Tanggal</label>

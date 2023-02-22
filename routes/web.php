@@ -31,9 +31,9 @@ Route::get('data/delete/{id}',      [BarangController::class, 'data_delete']);
 
 
 Route::get('/transaksi',            [TransaksiController::class, 'index']);
-Route::get('/transaksi/tambah',     [TransaksiController::class, 'transaksi_tambah']);
-Route::post('/transaksi/aksi',      [TransaksiController::class, 'transaksi_aksi']);
-Route::get('transaksi/hapus/{id}',  [TransaksiController::class, 'transaksi_hapus']);
+Route::get('/transaksi/create',     [TransaksiController::class, 'create']);
+Route::post('/transaksi/store',     [TransaksiController::class, 'store']);
+Route::get('transaksi/delete/{id}', [TransaksiController::class, 'delete']);
 
 Route::get('/laporan',              [TransaksiController::class, 'laporan']);
 Route::get('/cetak',                [TransaksiController::class, 'cetak']);

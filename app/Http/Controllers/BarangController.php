@@ -18,11 +18,11 @@ class BarangController extends Controller
 
     public function index(){
         $barang = Barang::all();
-        return view('menu.barang', ['barang' => $barang]);
+        return view('menu.barang.barang', ['barang' => $barang]);
     }
 
     public function create(){
-        return view('menu.barang_create');
+        return view('menu.barang.create');
     }
 
     public function store(Request $data){
@@ -42,7 +42,7 @@ class BarangController extends Controller
     public function edit($id)
     {
         $barang=Barang::find($id);
-        return view('menu.barang_edit', ['barang' => $barang ]);
+        return view('menu.barang.edit', ['barang' => $barang ]);
     }
 
     public function update($id, Request $data){
@@ -70,12 +70,12 @@ class BarangController extends Controller
 
     public function index_data(){
         $data_barang = DataBarang::all();
-        return view('menu.d_barang', ['data_barang' => $data_barang]);
+        return view('menu.data_barang.data_barang', ['data_barang' => $data_barang]);
     }
 
     public function data_create(){
         $barang = Barang::all();
-        return view('menu.d_barang_create', ['barang' => $barang]);
+        return view('menu.data_barang.create', ['barang' => $barang]);
     }
 
     public function data_store(Request $data){
@@ -104,7 +104,7 @@ class BarangController extends Controller
     public function data_edit($id){
         $barang = Barang::all();
         $data_barang = DataBarang::find($id);
-        return view('menu.d_barang_edit', [
+        return view('menu.data_barang.edit', [
             'barang' => $barang,
             'data_barang' => $data_barang
         ]);

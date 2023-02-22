@@ -8,7 +8,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Transaksi Barang</h1><br>
-                    <a href="/transaksi/tambah" class="btn bg-gradient-primary btn-xs">
+                    <a href="/transaksi/create" class="btn bg-gradient-primary btn-xs">
                         Input Transaksi</a>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                                 <td>{{$t->jenis}}</td>
                                 <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
-                                    <a href="{{ url('/transaksi/hapus/'.$t->id) }}" class="btn  bg-gradient-danger btn-sm"
+                                    <a href="{{ url('/transaksi/delete/'.$t->id) }}" class="btn  bg-gradient-danger btn-sm"
                                         onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')">Hapus</a>
                                 </td>
                             </tr>

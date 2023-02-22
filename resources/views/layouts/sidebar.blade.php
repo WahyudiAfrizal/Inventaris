@@ -24,11 +24,21 @@
                         </p>
                     </a>
                 </li>
+
+                {{-- Data User --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link @yield('user')" >
+                        <i class="nav-icon fas fa-solid fa-users" style="color: white"></i>
+                        <p style="color: white">
+                            Data User
+                        </p>
+                    </a>
+                </li>
                 
                 {{-- Menu Barang --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link @yield('master')">
-                        <i class="nav-icon fas fa-envelope" style="color: white"></i>
+                        <i class="nav-icon fas fa-solid fa-database" style="color: white"></i>
                         <p style="color: white">
                             Master
                             <i class="right fas fa-angle-left"></i>
@@ -88,7 +98,7 @@
                 {{-- Menu Transaksi --}}
                 <li class="nav-item">
                     <a href="/transaksi" class="nav-link @yield('transaksi')">
-                        <i class="nav-icon fas fa-edit" style="color: white"></i>
+                        <i class="nav-icon fas fa-briefcase" style="color: white"></i>
                         <p style="color: white">
                             Transaksi
                         </p>

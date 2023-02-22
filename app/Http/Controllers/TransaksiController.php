@@ -15,16 +15,16 @@ class TransaksiController extends Controller
 
     public function index(){
         $transaksi = Transaksi::all();
-        return view('menu.transaksi', ['transaksi' => $transaksi]);
+        return view('menu.transaksi.transaksi', ['transaksi' => $transaksi]);
     }
 
-    public function transaksi_tambah()
+    public function create()
     {
         $data_barang = DataBarang::all();
-        return view('menu.transaksi_tambah', ['data_barang' => $data_barang]);
+        return view('menu.transaksi.create', ['data_barang' => $data_barang]);
     }
 
-    public function transaksi_aksi(Request $data)
+    public function store(Request $data)
     {
         $data->validate([
             'tanggal' => 'required',
@@ -44,7 +44,7 @@ class TransaksiController extends Controller
         return redirect('/transaksi')->with('status','Data berhasil ditambahkan');
     }
 
-    public function transaksi_hapus($id)
+    public function delete($id)
     {
         $transaksi = Transaksi::find($id);
         $transaksi->delete();
@@ -54,10 +54,10 @@ class TransaksiController extends Controller
 
     public function laporan(){
         $transaksi = Transaksi::all();
-        return view('menu.laporan', ['transaksi' => $transaksi]);
+        return view('menu.laporan.laporan', ['transaksi' => $transaksi]);
     }
     public function cetak(){
         $transaksi = Transaksi::all();
-        return view('menu.cetak', ['transaksi' => $transaksi]);
+        return view('menu.laporan.cetak', ['transaksi' => $transaksi]);
     }
 }
