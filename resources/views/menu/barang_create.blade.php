@@ -6,7 +6,7 @@
         <section class="content">
             <div class="container-fluid"><br>
                 <div class="card">
-                    <div class="card-header" style="background-color: #0b507b"">
+                    <div class="card-header" style="background-color: #0b507b">
                         <h5 style="color:white">Create Jenis Barang</h5> 
                     </div>
                     <div class="card-body">

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Barang;
 use App\Models\DataBarang;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class BarangController extends Controller
 {
@@ -24,9 +25,11 @@ class BarangController extends Controller
 
     public function store(Request $data){
         $data->validate([
-            'jenis_barang' => 'required'
+            'jenis_barang' => 'required|unique:barang,jenis_barang'
         ]);
+        
         $barang = $data->jenis_barang;
+       
 
         Barang::insert([
             'jenis_barang' => $barang
