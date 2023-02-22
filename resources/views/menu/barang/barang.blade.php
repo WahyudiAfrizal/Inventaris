@@ -1,15 +1,16 @@
 @extends('index')
-@section('halaman','Transaksi')
-@section('transaksi','active')
+@section('halaman','Jenis Barang')
+@section('master','active')
+@section('jenis','active')
 @section('content')
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Transaksi Barang</h1><br>
-                    <a href="/transaksi/tambah" class="btn bg-gradient-primary btn-xs">
-                        Input Transaksi</a>
+                    <h1>Jenis-Jenis Barang</h1><br>
+                    <a href="{{ url('/barang/create') }}" class="btn bg-gradient-primary btn-xs">
+                        <i class="bi bi-plus-lg"></i> Create New Barang</a>
                 </div>
             </div>
         </div>
@@ -25,30 +26,25 @@
                         {{ Session::get('status') }}
                     </div>
                     @endif
+                    
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th style="width: 10px">No</th>
-                                <th >Tanggal</th>
-                                <th >Nama Barang</th>
-                                <th >Jumlah</th>
-                                <th >Jenis Transaksi</th>
-                                <th >Keterangan</th>
-                                <th width="13%" class="text-center">OPSI</th>
+                                <th width="1%">No</th>
+                                <th>Jenis Barang</th>
+                                <th width="25%" class="text-center">OPSI</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($transaksi as $t)
+                            @foreach ($barang as $b)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{ date('d-m-Y',strtotime($t->tanggal)) }}</td>
-                                <td>{{$t->nama_barang}}</td>
-                                <td>{{$t->stok}}</td>
-                                <td>{{$t->jenis}}</td>
-                                <td>{{$t->keterangan}}</td>
+                                <td>{{$b->jenis_barang }}</td>
                                 <td class="text-center">
-                                    <a href="{{ url('/transaksi/hapus/'.$t->id) }}" class="btn  bg-gradient-danger btn-sm"
-                                        onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')">Hapus</a>
+                                       <a href="{{ url('/barang/edit/'.$b->id) }}" class="btn bg-gradient-warning btn-sm">
+                                        <i class="bi bi-pencil-square"></i> Edit</a>
+                                       <a href="{{ url('/barang/delete/'.$b->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
+                                        <i class="bi bi-trash"></i> Delete</a>
                                 </td>
                             </tr>
                             @endforeach

@@ -11,7 +11,7 @@
               <h5 style="color: white">Input Transaksi</h5>
           </div>
           <div class="card-body">
-              <form method="post" action="/transaksi/aksi">
+              <form method="post" action="/transaksi/store">
               @csrf
               <div class="form-group">
                   <label>Tanggal</label>
@@ -38,8 +38,8 @@
                   <label>Keterangan</label>
                   <textarea class="form-control" name="keterangan"></textarea>
               </div>
-              <a href="/transaksi" class="btn bg-gradient-success btn-sm">Kembali</a>
-              <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
+              <a href="/transaksi" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>
+              <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Save</i></button>
               </form>
           </div>
           </div>

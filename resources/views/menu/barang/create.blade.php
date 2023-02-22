@@ -20,8 +20,8 @@
                                     <div class="error" style="color:#CD0404"><b>Jenis barang sudah ada</b></div>
                                 @enderror
                             </div>
-                            <a href="/barang" class="btn bg-gradient-success btn-sm">Kembali</a>
-                            <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
+                            <a href="/barang" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>
+                            <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Save</i></button>
                         </form>
                     </div>
                 </div>
