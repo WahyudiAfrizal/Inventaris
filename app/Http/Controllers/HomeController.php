@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Barang;
+use App\Models\DataBarang;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $barang = Barang::count();
+        $data_barang = DataBarang::count();
+        $user = User::count();
+
+        return view('dashboard', compact('barang', 'data_barang', 'user'));
     }
 }
