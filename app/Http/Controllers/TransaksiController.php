@@ -51,13 +51,4 @@ class TransaksiController extends Controller
 
         return redirect('transaksi')->with('Sukses', 'Transaksi berhasil dihapus');
     }
-
-    public function laporan(){
-        $transaksi = Transaksi::all();
-        return view('menu.laporan.laporan', ['transaksi' => $transaksi]);
-    }
-    public function cetak(){
-        $transaksi = Transaksi::all();
-        return view('menu.laporan.cetak', ['transaksi' => $transaksi]);
-    }
 }
