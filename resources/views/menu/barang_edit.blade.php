@@ -6,7 +6,7 @@
     <section class="content">
       <div class="container-fluid"><br>
           <div class="card">
-            <div class="card-header" style="background-color:  #095642">
+            <div class="card-header" style="background-color: #0b507b">
               <h5 style="color:white">Edit Barang</h5>
             </div>
             <div class="card-body">
@@ -16,7 +16,7 @@
                     <label>Jenis Barang</label>
                     <input type="text" name="jenis_barang" class="form-control" value="{{ $barang->jenis_barang }}">
                 </div>
-                <a href="{{ url('/barang') }}" class="btn btn-sm btn-success">Kembali</a>
+                <a href="{{ url('/barang') }}" class="btn btn-sm btn-info">Kembali</a>
                 <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
               </form>
             </div>

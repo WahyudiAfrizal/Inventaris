@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-primary elevation-4" style="background-color: #095642">
+<aside class="main-sidebar sidebar-primary elevation-4" style="background-color: #0b507b">
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->

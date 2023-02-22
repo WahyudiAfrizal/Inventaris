@@ -6,7 +6,7 @@
     <section class="content">
       <div class="container-fluid"><br>
           <div class="card">
-            <div class="card-header" style="background-color:  #095642">
+            <div class="card-header" style="background-color: #0b507b"">
               <h5 style="color: white">Input Transaksi</h5>
           </div>
           <div class="card-body">
@@ -37,7 +37,7 @@
                   <label>Keterangan</label>
                   <textarea class="form-control" name="keterangan"></textarea>
               </div>
-              <a href="/transaksi" class="btn btn-success">Kembali</a>
+              <a href="/transaksi" class="btn btn-info">Kembali</a>
               <input type="submit" class="btn btn-primary" value="Simpan">
               </form>
           </div>

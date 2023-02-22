@@ -9,7 +9,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Jenis-Jenis Barang</h1><br>
-                    <a href="{{ url('/barang/create') }}" class="btn btn-success">Create New Barang</a>
+                    <a href="{{ url('/barang/create') }}" class="btn btn-info">Create New Barang</a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$b->jenis_barang }}</td>
                                 <td class="text-center">
-                                       <a href="{{ url('/barang/edit/'.$b->id) }}" class="btn btn-sm btn-success">Edit</a>
+                                       <a href="{{ url('/barang/edit/'.$b->id) }}" class="btn btn-sm btn-info">Edit</a>
                                        <a href="{{ url('/barang/delete/'.$b->id) }}" class="btn btn-sm btn-primary" onclick="return confirm('Apakah anda yakin?')">Hapus</a>
                                 </td>
                             </tr>

@@ -6,7 +6,7 @@
         <section class="content">
             <div class="container-fluid"><br>
                 <div class="card">
-                    <div class="card-header" style="background-color:  #095642">
+                    <div class="card-header" style="background-color: #0b507b"">
                         <h5 style="color:white">Create Jenis Barang</h5> 
                     </div>
                     <div class="card-body">
@@ -20,7 +20,7 @@
                                 </span>
                                 @endif
                             </div>
-                            <a href="/barang" class="btn btn-sm btn-success">Kembali</a>
+                            <a href="/barang" class="btn btn-sm btn-info">Kembali</a>
                             <input type="submit" class="btn btn-sm btn-primary" value="Simpan">
                         </form>
                     </div>

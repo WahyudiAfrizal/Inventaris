@@ -8,7 +8,7 @@
             <div class="container-fluid">
               <div class="row mb-2">
                 <div class="col-sm-8">
-                  <h3 style="color: rgb(141, 139, 139)">laporan Transaksi</h3>
+                  <h3 style="color: rgb(95, 93, 93)">laporan Transaksi</h3>
                 </div>
               </div>
             </div>
