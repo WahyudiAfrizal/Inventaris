@@ -6,6 +6,8 @@ use App\Models\Barang;
 use App\Models\DataBarang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
+
 
 class DataBarangController extends Controller
 {
@@ -56,23 +58,29 @@ class DataBarangController extends Controller
         ]);
     }
  
-    public function update($id, Request $data){
+    public function update(Request $data, $id){
         $data->validate([
             'nama_barang' => 'required',
-            'foto' => 'required|image|mimes:jpg,png',
             'jenis_barang' => 'required',
         ]);
-        $foto = $data->foto;
-        $slug = Str::slug($foto->getClientOriginalName());
-        $new_foto = time() .'_'. $slug;
-        $foto->move('edit/barang',$new_foto);
+        $data_barang = DataBarang::find($id);
+
+        if($data->hasFile('foto')){
+            $data->validate([
+            'foto' => 'required|image|mimes:jpg,png',
+        ]);
+            File::delete($data_barang->foto);
+            $foto = $data->foto;
+            $slug = Str::slug($foto->getClientOriginalName());
+            $new_foto = time() .'_'. $slug;
+            $foto->move('uploads/barang',$new_foto);
+        }
 
         $d_nama = $data->nama_barang;
         $d_jenis = $data->jenis_barang;
 
-        $data_barang = DataBarang::find($id);
         $data_barang->nama_barang = $d_nama;
-        $data_barang->foto  = 'edit/barang/'.$new_foto;
+        $data_barang->foto  = 'uploads/barang/'.$new_foto;
         $data_barang->jenis_barang = $d_jenis;
         $data_barang->save();
 
@@ -80,6 +88,7 @@ class DataBarangController extends Controller
     }
     public function delete($id){
         $data_barang = DataBarang::find($id);
+        File::delete($data_barang->foto);
         $data_barang->delete();
 
         return redirect('/data')->with('status', 'Data berhasil dihapus');

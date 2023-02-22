@@ -8,7 +8,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Transaksi Barang</h1><br>
-                    <a href="/transaksi/create" class="btn bg-gradient-primary btn-xs">
+                    <a href="/transaksi/create" class="btn bg-gradient-primary btn-xs"><i class="bi bi-plus-lg"></i>
                         Input Transaksi</a>
                 </div>
             </div>
@@ -48,7 +48,8 @@
                                 <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
                                     <a href="{{ url('/transaksi/delete/'.$t->id) }}" class="btn  bg-gradient-danger btn-sm"
-                                        onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')">Hapus</a>
+                                        onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')"><i class="bi bi-trash"></i>
+                                         Hapus</a>
                                 </td>
                             </tr>
                             @endforeach

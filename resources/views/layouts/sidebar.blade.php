@@ -47,7 +47,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                           <a href="/barang" class="nav-link @yield('jenis')">
-                            <i class="nav-icon far fa-circle text-info" style="color: white"></i>
+                            <i class="nav-icon bi bi-journal-richtext text-info" style="color: white"></i>
                             <p style="color: white">
                                 Jenis Barang
                             </p>
@@ -55,7 +55,7 @@
                         </li>
                         <li class="nav-item">
                           <a href="/data" class="nav-link @yield('data')">
-                            <i class="nav-icon far fa-circle text-info" style="color: white"></i>
+                            <i class="nav-icon bi bi-journal-text text-info" style="color: white"></i>
                             <p style="color: white">
                                 Data Barang
                             </p>

@@ -40,8 +40,9 @@
                                         <div class="error" style="color:#CD0404"><b>Input dengan angka</b></div>
                                     @enderror
                             </div>
-                            <a href="/data" class="btn bg-gradient-success btn-sm">Kembali</a>
-                            <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
+                            <a href="/data" class="btn bg-gradient-danger btn-sm"><i class="bi bi-arrow-clockwise"></i>
+                            Cancle</a>
+                            <input type="submit" class="btn bg-gradient-primary btn-sm" value="Save">
                         </form>
                     </div>
                 </div>

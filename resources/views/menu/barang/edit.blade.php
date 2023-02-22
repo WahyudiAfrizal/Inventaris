@@ -18,8 +18,9 @@
                     <label>Jenis Barang</label>
                     <input type="text" name="jenis_barang" class="form-control" value="{{ $barang->jenis_barang }}">
                 </div>
-                <a href="{{ url('/barang') }}" class="btn bg-gradient-success btn-sm">Kembali</a>
-                <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
+                <a href="{{ url('/barang') }}" class="btn bg-gradient-danger btn-sm"><i class="bi bi-arrow-clockwise"></i>
+                   Cancle</a>
+                <input type="submit" class="btn bg-gradient-primary btn-sm" value="Save">
               </form>
             </div>
           </div>

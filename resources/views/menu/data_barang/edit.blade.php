@@ -28,8 +28,9 @@
                                 @endforeach
                             </select>                   
                         </div>
-                        <a href="{{ url('/data') }}" class="btn bg-gradient-success btn-sm">Kembali</a>
-                        <input type="submit" class="btn bg-gradient-primary btn-sm" value="Simpan">
+                        <a href="{{ url('/data') }}" class="btn bg-gradient-danger btn-sm"><i class="bi bi-arrow-clockwise"></i>
+                        Cancel</a>
+                        <input type="submit" class="btn bg-gradient-primary btn-sm" value="Save">
                         </form>
                     </div>
                 </div>
