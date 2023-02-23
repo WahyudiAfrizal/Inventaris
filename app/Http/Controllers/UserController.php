@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -13,29 +13,35 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
         $data = User::all();
         return view('menu.user.user', compact('data'));
     }
 
-    public function create(){
+    public function create()
+    {
         $data = User::all();
         return view('menu.user.create', compact('data'));
     }
 
     public function store(Request $data)
     {
-        // dd($data->all());
+        //dd($data->all());
         $data->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required',
             'role' => 'required',
         ]);
+        //hash -> tidak menampilkan kata sandi
+        $password = User::get('password');
+        $hashed = Hash::make($password);
+        
         User::insert([
             'name'=>$data->name,
             'email'=>$data->email,
-            'password'=>$data->password,
+            'password'=>$hashed,
             'role'=>$data->role,
         ]);
     
@@ -53,19 +59,19 @@ class UserController extends Controller
         $data->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'required',
+            // 'password' => 'required',
             'role' => 'required'
         ]);
         
         $a = $data->name;
         $b = $data->email;
-        $c = $data->password;
+        // $c = $data->password;
         $d = $data->role;
 
         $user=User::find($id);
         $user->name = $a;
         $user->email = $b;
-        $user->password = $c;
+        // $user->password = $c;
         $user->role = $d;
         $user->save();
 

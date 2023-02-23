@@ -27,33 +27,27 @@
                     @endif
                     <table class="table table-striped">
                         <thead>
-                          <tr>
-                            <th width="1%">No</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th width="25%" class="text-center">Opsi</th>
-                          </tr>
+                            <tr>
+                                <th width="1%">No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th width="25%" class="text-center">Opsi</th>
+                            </tr>
                         </thead>
                         <tbody>
                             @foreach ($data as $user)
                             <tr>
-                              <td>{{ $loop->iteration }}</td>
-                              <td>{{ $user->name }}</td>
-                              <td>{{ $user->email }}</td>
-                              <td>{{ $user->role}}
-                                {{-- @if(!empty($user->getRoleNames()))
-                                  @foreach($user->getRoleNames() as $v)
-                                     <label class="badge badge-success">{{ $v }}</label>
-                                  @endforeach
-                                @endif --}}
-                              </td>
-                              <td class="text-center">
-                                  <a href="{{ url('/user/edit/'.$user->id) }}" class="btn bg-gradient-warning btn-sm">
-                                   <i class="bi bi-pencil-square"></i> Edit</a>
-                                  <a href="{{ url('/user/delete/'.$user->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
-                                   <i class="bi bi-trash"></i> Delete</a>
-                              </td>                              
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->role}}</td>
+                                <td class="text-center">
+                                    <a href="{{ url('/user/edit/'.$user->id) }}" class="btn bg-gradient-warning btn-sm">
+                                    <i class="bi bi-pencil-square"></i> Edit</a>
+                                    <a href="{{ url('/user/delete/'.$user->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
+                                    <i class="bi bi-trash"></i> Delete</a>
+                                </td>                              
                             </tr>
                             @endforeach
                         </tbody>
