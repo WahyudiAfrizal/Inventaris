@@ -35,15 +35,13 @@ class UserController extends Controller
             'role' => 'required',
         ]);
         //hash -> tidak menampilkan kata sandi
-        $password = User::get('password');
-        $hashed = Hash::make($password);
-        
-        User::insert([
-            'name'=>$data->name,
-            'email'=>$data->email,
-            'password'=>$hashed,
+        $data = new User([
+            'name' => $data->name,
+            'email' => $data->email,
+            'password' => Hash::make($data->password),
             'role'=>$data->role,
         ]);
+        $data->save();
     
         return redirect('/user')->with('status','User berhasil ditambah');
     }
