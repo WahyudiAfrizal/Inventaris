@@ -27,7 +27,7 @@
 
                 {{-- Data User --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link @yield('user')" >
+                    <a href="/user" class="nav-link @yield('user')" >
                         <i class="nav-icon fas fa-solid fa-users" style="color: white"></i>
                         <p style="color: white">
                             Data User

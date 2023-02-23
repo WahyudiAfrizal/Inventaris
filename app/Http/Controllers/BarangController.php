@@ -32,7 +32,6 @@ class BarangController extends Controller
         
         $barang = $data->jenis_barang;
        
-
         Barang::insert([
             'jenis_barang' => $barang
         ]);
@@ -64,76 +63,5 @@ class BarangController extends Controller
         
         return redirect('/barang')->with('status', 'Data berhasil dihapus');
         
-    }
-
-    public function index_data(){
-        $data_barang = DataBarang::all();
-        return view('menu.data_barang.data_barang', ['data_barang' => $data_barang]);
-    }
-
-    public function data_create(){
-        $barang = Barang::all();
-        return view('menu.data_barang.create', ['barang' => $barang]);
-    }
-
-    public function data_store(Request $data){
-        $data->validate([
-            'nama_barang' => 'required|unique:data_barang,nama_barang',
-            'foto' => 'required|image|mimes:jpg,png',
-            'jenis_barang' => 'required',
-            'stok' => 'required|integer'
-        ]);
-
-        $foto = $data->foto;
-        $slug = Str::slug($foto->getClientOriginalName());
-        $new_foto = time() .'_'. $slug;
-        $foto->move('uploads/barang',$new_foto);
-
-         $barang = new DataBarang;
-         $barang->nama_barang = $data->nama_barang;
-         $barang->foto  = 'uploads/barang/'.$new_foto;
-         $barang->jenis_barang = $data->jenis_barang;
-         $barang->stok = $data->stok;
-         $barang->save();
-        
-        return redirect('/data')->with('status', 'Data berhasil ditambahkan');
-    }
-
-    public function data_edit($id){
-        $barang = Barang::all();
-        $data_barang = DataBarang::find($id);
-        return view('menu.data_barang.edit', [
-            'barang' => $barang,
-            'data_barang' => $data_barang
-        ]);
-    }
- 
-    public function data_update($id, Request $data){
-        $data->validate([
-            'nama_barang' => 'required',
-            'foto' => 'required|image|mimes:jpg,png',
-            'jenis_barang' => 'required',
-        ]);
-        $foto = $data->foto;
-        $slug = Str::slug($foto->getClientOriginalName());
-        $new_foto = time() .'_'. $slug;
-        $foto->move('edit/barang',$new_foto);
-
-        $d_nama = $data->nama_barang;
-        $d_jenis = $data->jenis_barang;
-
-        $data_barang = DataBarang::find($id);
-        $data_barang->nama_barang = $d_nama;
-        $data_barang->foto  = 'edit/barang/'.$new_foto;
-        $data_barang->jenis_barang = $d_jenis;
-        $data_barang->save();
-
-        return redirect('/data')->with('status', 'Data berhasil diubah');
-    }
-    public function data_delete($id){
-        $data_barang = DataBarang::find($id);
-        $data_barang->delete();
-
-        return redirect('/data')->with('status', 'Data berhasil dihapus');
     }
 }

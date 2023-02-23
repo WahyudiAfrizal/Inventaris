@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Barang;
 use App\Models\DataBarang;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,7 +30,8 @@ class HomeController extends Controller
         $barang = Barang::count();
         $data_barang = DataBarang::count();
         $user = User::count();
+        $transaksi = Transaksi::count();
 
-        return view('dashboard', compact('barang', 'data_barang', 'user'));
+        return view('dashboard', compact('barang', 'data_barang', 'user','transaksi'));
     }
 }

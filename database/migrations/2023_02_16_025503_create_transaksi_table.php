@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('tanggal');
             $table->string('nama_barang');
             $table->integer('stok');
-            $table->enum('jenis',['barang masuk','barang keluar']);
+            $table->enum('jenis',['barang_masuk','barang_keluar']);
             $table->text('keterangan');
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DataBarangController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,6 +16,13 @@ Route::get('/', function () {return view('auth.login');});
 Auth::routes(['register' => false]);
 
 Route::get('/home',                 [HomeController::class, 'index'])->name('index');
+
+Route::get('/user',                 [UserController::class, 'index']);
+Route::get('/user/create',          [UserController::class, 'create']);
+Route::post('/user/store',          [UserController::class, 'store']);
+Route::get('/user/edit/{id}',       [UserController::class, 'edit']);
+Route::put('/user/update/{id}',     [UserController::class, 'update']);
+Route::get('/user/delete/{id}',     [UserController::class, 'delete']);
 
 Route::get('/barang',               [BarangController::class, 'index']);
 Route::get('/barang/create',        [BarangController::class, 'create']);

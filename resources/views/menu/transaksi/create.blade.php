@@ -30,9 +30,9 @@
                   <br>
                   <label>Jenis Transaksi</label>
                   <select class="form-control" name="jenis">
-                      <option value="">- Pilih Jenis</option>
-                      <option value="Barang Masuk">Barang Masuk</option>
-                      <option value="Barang Keluar">Barang Keluar</option>
+                      <option >- Pilih Jenis</option>
+                      <option value="Barang_Masuk">Barang Masuk</option>
+                      <option value="Barang_Keluar">Barang Keluar</option>
                   </select>
                   <br>
                   <label>Keterangan</label>
