@@ -22,8 +22,8 @@
                             <th style="width: 10px">No</th>
                             <th >Tanggal</th>
                             <th >Jenis Barang</th>
-                            <th >Stok</th>
-                            <th >jenis</th>
+                            <th >Jenis Transaksi</th>
+                            <th >Jumlah</th>
                             <th >Keterangan</th>
                         </tr>
                     </thead>
@@ -33,8 +33,8 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$t->tanggal}}</td>
                             <td>{{$t->nama_barang}}</td>
-                            <td>{{$t->stok}}</td>
                             <td>{{$t->jenis}}</td>
+                            <td>{{$t->jumlah}}</td>
                             <td>{{$t->keterangan}}</td>
                         </tr>
                         @endforeach

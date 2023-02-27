@@ -26,20 +26,26 @@ class TransaksiController extends Controller
 
     public function store(Request $data)
     {
+        //dd($data->all());
         $data->validate([
             'tanggal' => 'required',
             'nama_barang'=> 'required',
-            'stok' => 'required|integer',
             'jenis' => 'required',
+            'jumlah' => 'required|integer',
             'keterangan' => 'required'
         ]);
-        Transaksi::insert([
+
+        Transaksi::create([
             'tanggal'=>$data->tanggal,
             'nama_barang'=>$data->nama_barang,
-            'stok'=>$data->stok,
             'jenis'=>$data->jenis,
+            'jumlah'=>$data->jumlah,
             'keterangan'=>$data->keterangan
-        ]);
+        ]);                                          
+        
+        $data_barang = DataBarang::find($data->id);
+        $data_barang->stok   += $data->jumlah;
+        $data_barang->save();
 
         return redirect('/transaksi')->with('status','Data berhasil ditambahkan');
     }

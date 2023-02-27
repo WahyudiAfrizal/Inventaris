@@ -38,15 +38,15 @@ Route::middleware('auth')->group(function(){
     Route::get('/data',                 [DataBarangController::class, 'index']);
     Route::get('/data/create',          [DataBarangController::class, 'create']);
     Route::post('/data/store',          [DataBarangController::class, 'store']);
-    Route::get('data/edit/{id}',        [DataBarangController::class, 'edit']);
-    Route::put('data/update/{id}',      [DataBarangController::class, 'update']);
-    Route::get('data/delete/{id}',      [DataBarangController::class, 'delete']);
+    Route::get('/data/edit/{id}',        [DataBarangController::class, 'edit']);
+    Route::put('/data/update/{id}',      [DataBarangController::class, 'update']);
+    Route::get('/data/delete/{id}',      [DataBarangController::class, 'delete']);
 
 
     Route::get('/transaksi',            [TransaksiController::class, 'index']);
     Route::get('/transaksi/create',     [TransaksiController::class, 'create']);
     Route::post('/transaksi/store',     [TransaksiController::class, 'store']);
-    Route::get('transaksi/delete/{id}', [TransaksiController::class, 'delete']);
+    Route::get('/transaksi/delete/{id}', [TransaksiController::class, 'delete']);
 
     Route::get('/laporan',              [LaporanController::class, 'laporan']);
     Route::get('/cetak',                [LaporanController::class, 'cetak']);

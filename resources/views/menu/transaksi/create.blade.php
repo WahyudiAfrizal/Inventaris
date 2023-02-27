@@ -15,8 +15,12 @@
               @csrf
               <div class="form-group">
                   <label>Tanggal</label>
-                  <input type="date" name="tanggal" class="form-control"> 
+                  <input type="date" name="tanggal" class="form-control">
+                  @error('tanggal')
+                      <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                  @enderror 
                   <br>
+
                   <label>Nama Barang</label>
                   <select class="form-control" name="nama_barang">
                     <option value="">- Pilih Barang</option>
@@ -24,19 +28,34 @@
                         <option value="{{ $k->nama_barang }}">{{ $k->nama_barang }}</option>
                     @endforeach
                   </select>
+                  @error('nama_barang')
+                      <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                  @enderror
                   <br>
-                  <label>Jumlah</label>
-                  <input type="integer" name="stok" class="form-control">
-                  <br>
+
                   <label>Jenis Transaksi</label>
                   <select class="form-control" name="jenis">
                       <option value="">- Pilih Jenis</option>
                       <option value="barang_masuk">Barang Masuk</option>
                       <option value="barang_keluar">Barang Keluar</option>
                   </select>
+                  @error('jenis')
+                      <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                  @enderror
                   <br>
+
+                  <label>Jumlah</label>
+                  <input type="integer" name="jumlah" class="form-control">
+                  @error('jumlah')
+                      <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                  @enderror
+                  <br>
+
                   <label>Keterangan</label>
                   <textarea class="form-control" name="keterangan"></textarea>
+                  @error('keterangan')
+                      <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                  @enderror
               </div>
               <a href="/transaksi" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>
               <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Save</i></button>

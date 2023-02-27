@@ -17,8 +17,8 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->date('tanggal');
             $table->string('nama_barang');
-            $table->integer('stok');
             $table->enum('jenis',['barang_masuk','barang_keluar']);
+            $table->integer('jumlah');
             $table->text('keterangan');
             $table->timestamps();
         });

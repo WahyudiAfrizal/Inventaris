@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Transaksi Barang</h1><br>
+                    <h1>Data User</h1><br>
                     <a href="/user/create" class="btn bg-gradient-primary btn-xs"><i class="bi bi-plus-lg"></i>
                         Add User</a>
                 </div>

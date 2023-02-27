@@ -31,8 +31,8 @@
                                 <th style="width: 10px">No</th>
                                 <th >Tanggal</th>
                                 <th >Nama Barang</th>
-                                <th >Jumlah</th>
                                 <th >Jenis Transaksi</th>
+                                <th >Jumlah</th>
                                 <th >Keterangan</th>
                                 <th width="13%" class="text-center">OPSI</th>
                             </tr>
@@ -43,8 +43,8 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{ date('d-m-Y',strtotime($t->tanggal)) }}</td>
                                 <td>{{$t->nama_barang}}</td>
-                                <td>{{$t->stok}}</td>
                                 <td>{{$t->jenis}}</td>
+                                <td>{{$t->jumlah}}</td>
                                 <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
                                     <a href="{{ url('/transaksi/delete/'.$t->id) }}" class="btn  bg-gradient-danger btn-sm" onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')">

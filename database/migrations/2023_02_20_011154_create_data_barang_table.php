@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('data_barang', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('nama_barang');
             $table->string('jenis_barang');
             $table->integer('stok');
