@@ -15,7 +15,11 @@ class TransaksiController extends Controller
 
     public function index(){
         $transaksi = Transaksi::all();
-        return view('menu.transaksi.transaksi', ['transaksi' => $transaksi]);
+        $data = DataBarang::all();
+        return view('menu.transaksi.transaksi', [
+            'transaksi' => $transaksi,
+            'data' => $data
+        ]);
     }
 
     public function create()

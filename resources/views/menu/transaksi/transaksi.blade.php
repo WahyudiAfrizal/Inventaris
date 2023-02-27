@@ -30,7 +30,7 @@
                             <tr>
                                 <th style="width: 10px">No</th>
                                 <th >Tanggal</th>
-                                <th >ID Barang</th>
+                                <th >Nama Barang</th>
                                 <th >Jenis Transaksi</th>
                                 <th >Jumlah</th>
                                 <th >Keterangan</th>
@@ -39,10 +39,11 @@
                         </thead>
                         <tbody>
                             @foreach ($transaksi as $t)
+                            @foreach ($data as $d)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{ date('d-m-Y',strtotime($t->tanggal)) }}</td>
-                                <td>{{$t->barang_id}}</td>
+                                <td>{{$d->nama_barang}}</td>
                                 <td>{{$t->jenis}}</td>
                                 <td>{{$t->jumlah}}</td>
                                 <td>{{$t->keterangan}}</td>
@@ -52,6 +53,7 @@
                                     </a>
                                 </td>
                             </tr>
+                            @endforeach
                             @endforeach
                         </tbody>
                     </table>                           

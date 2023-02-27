@@ -12,6 +12,6 @@ class Transaksi extends Model
     
     public function databarang()
     {
-        return $this->belongsTo('App\DataBarang');
+        return $this->belongsTo(DataBarang::class);
     }
 }
