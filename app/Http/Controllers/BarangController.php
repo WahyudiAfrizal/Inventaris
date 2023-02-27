@@ -46,7 +46,7 @@ class BarangController extends Controller
 
     public function update($id, Request $data){
         $data->validate([
-            'jenis_barang' => 'required'
+            'jenis_barang' => 'required|unique:barang,jenis_barang'
         ]);
         $nama_barang = $data->jenis_barang;
 
