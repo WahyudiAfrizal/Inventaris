@@ -62,6 +62,7 @@ class DataBarangController extends Controller
         $data->validate([
             'nama_barang' => 'required',
             'jenis_barang' => 'required',
+            'foto' => 'required'
         ]);
         $data_barang = DataBarang::find($id);
 
