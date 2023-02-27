@@ -34,7 +34,7 @@ class TransaksiController extends Controller
             'jumlah' => 'required|integer',
             'keterangan' => 'required'
         ]);
-
+        // dd($data->jenis);
         Transaksi::create([
             'tanggal'=>$data->tanggal,
             'barang_id'=>$data->barang_id,
@@ -43,9 +43,16 @@ class TransaksiController extends Controller
             'keterangan'=>$data->keterangan
         ]);                                          
         
-        $data_barang = DataBarang::find($data->barang_id);
-        $data_barang->stok   += $data->jumlah;
-        $data_barang->save();
+        if ($data->jenis == 'barang_masuk'){
+                $data_barang = DataBarang::find($data->barang_id);
+                $data_barang->stok   += $data->jumlah;
+                $data_barang->save();
+        }else{
+                $data_barang = DataBarang::find($data->barang_id);
+                $data_barang->stok   -= $data->jumlah;
+                $data_barang->save();
+        }
+        
 
         return redirect('/transaksi')->with('status','Data berhasil ditambahkan');
     }

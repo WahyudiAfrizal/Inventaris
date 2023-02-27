@@ -30,7 +30,7 @@
                             <tr>
                                 <th style="width: 10px">No</th>
                                 <th >Tanggal</th>
-                                <th >Nama Barang</th>
+                                <th >ID Barang</th>
                                 <th >Jenis Transaksi</th>
                                 <th >Jumlah</th>
                                 <th >Keterangan</th>

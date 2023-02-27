@@ -10,7 +10,7 @@ class Transaksi extends Model
     protected $table = "transaksi";
     protected $fillable = ["tanggal", "barang_id", "jenis", "jumlah","keterangan"];
     
-    public function kategori()
+    public function databarang()
     {
         return $this->belongsTo('App\DataBarang');
     }
