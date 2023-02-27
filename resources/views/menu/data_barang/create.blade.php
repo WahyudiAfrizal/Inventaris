@@ -16,7 +16,7 @@
                             @csrf
                             <div class="form-group">
                                 <label>Nama Barang</label>
-                                <input type="text" name="nama_barang" class="form-control">
+                                <input type="text" name="nama_barang" value="{{ old('nama_barang') }}"class="form-control">
                                 @error('nama_barang')
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
@@ -40,7 +40,7 @@
                                 @enderror
                                 <br>
                                 <label>Stok</label>
-                                    <input type="integer" name="stok" class="form-control">
+                                    <input type="integer" name="stok" value="{{ old('stok') }}" class="form-control">
                                     @error('stok')
                                         <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                     @enderror

@@ -15,14 +15,14 @@
                         @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Nama</label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" value="{{ old('name') }}" name="name">
                                 @error('name')
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="text" class="form-control" name="email">
+                                <input type="text" class="form-control" value="{{ old('email') }}" name="email">
                                 @error('email')
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror

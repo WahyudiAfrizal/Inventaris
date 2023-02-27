@@ -15,7 +15,7 @@
               @csrf
               <div class="form-group">
                   <label>Tanggal</label>
-                  <input type="date" name="tanggal" class="form-control">
+                  <input type="date" name="tanggal" value="{{ old('tanggal') }}" class="form-control">
                   @error('tanggal')
                       <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                   @enderror 
@@ -45,7 +45,7 @@
                   <br>
 
                   <label>Jumlah</label>
-                  <input type="integer" name="jumlah" class="form-control">
+                  <input type="integer" name="jumlah" value="{{ old('jumlah') }}" class="form-control">
                   @error('jumlah')
                       <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                   @enderror

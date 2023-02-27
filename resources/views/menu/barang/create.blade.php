@@ -15,7 +15,7 @@
                         <form method="post" action="{{ url('/barang/store') }}">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="jenis_barang" class="form-control">
+                                <input type="text" name="jenis_barang" value="{{ old('jenis_barang') }}" class="form-control">
                                 @error('jenis_barang')
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
