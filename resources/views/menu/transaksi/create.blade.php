@@ -57,8 +57,8 @@
                       <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                   @enderror
               </div>
-              <a href="/transaksi" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>
-              <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Save</i></button>
+              <a href="/transaksi" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Kembali</i></a>
+              <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Simpan</i></button>
               </form>
           </div>
           </div>

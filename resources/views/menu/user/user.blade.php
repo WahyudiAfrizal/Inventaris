@@ -9,7 +9,7 @@
                 <div class="col-sm-6">
                     <h1>Data User</h1><br>
                     <a href="/user/create" class="btn bg-gradient-primary btn-xs"><i class="bi bi-plus-lg"></i>
-                        Add User</a>
+                        Tambah User</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                                     <a href="{{ url('/user/edit/'.$user->id) }}" class="btn bg-gradient-warning btn-sm">
                                     <i class="bi bi-pencil-square"></i> Edit</a>
                                     <a href="{{ url('/user/delete/'.$user->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
-                                    <i class="bi bi-trash"></i> Delete</a>
+                                    <i class="bi bi-trash"></i> Hapus</a>
                                 </td>                              
                             </tr>
                             @endforeach

@@ -9,7 +9,7 @@
             <div class="container-fluid"><br>
                 <div class="card">
                     <div class="card-header" style="background-color: #0b507b"">
-                        <h5 style="color: white">Create Data Barang</h5> 
+                        <h5 style="color: white">Input Data Barang</h5> 
                     </div>
                     <div class="card-body">
                         <form method="post" action="{{ url('/data/store') }}" enctype="multipart/form-data">
@@ -45,8 +45,8 @@
                                         <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                     @enderror
                             </div>
-                            <a href="/data" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>
-                            <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Save</i></button>
+                            <a href="/data" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Kembali</i></a>
+                            <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Simpan</i></button>
                         </form>
                     </div>
                 </div>

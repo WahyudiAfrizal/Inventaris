@@ -48,7 +48,7 @@
                                 <td>{{$t->keterangan}}</td>
                                 <td class="text-center">
                                     <a href="{{ url('/transaksi/delete/'.$t->id) }}" class="btn  bg-gradient-danger btn-sm" onclick="return confirm('Anda Yakin ingin menghapus Transaksi ini ?')">
-                                        <i class="bi bi-trash"></i> Delete
+                                        <i class="bi bi-trash"></i> Hapus
                                     </a>
                                 </td>
                             </tr>
