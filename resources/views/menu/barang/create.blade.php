@@ -17,7 +17,7 @@
                             <div class="form-group">
                                 <input type="text" name="jenis_barang" class="form-control">
                                 @error('jenis_barang')
-                                    <div class="error" style="color:#CD0404"><b>Jenis barang sudah ada</b></div>
+                                    <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
                             </div>
                             <a href="/barang" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>

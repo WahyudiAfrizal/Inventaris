@@ -18,13 +18,15 @@
                                 <label>Nama Barang</label>
                                 <input type="text" name="nama_barang" class="form-control">
                                 @error('nama_barang')
-                                    <div class="error" style="color:#CD0404"><b>Nama barang sudah ada</b></div>
+                                    <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
                                 <br>
                                 <label>Foto Barang</label>
-                                <input type="file" name="foto" class="form-control" 
-                                 accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
-                                 <div class="mt-3"><img src="" id="output" width="150"></div>
+                                <input type="file" name="foto" class="form-control" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                                <div class="mt-3"><img src="" id="output" width="150"></div>
+                                @error('foto')
+                                    <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                                @enderror
                                 <br>
                                 <label>Jenis Barang</label>
                                 <select class="form-control" name="jenis_barang">
@@ -33,11 +35,14 @@
                                         <option value="{{ $k->jenis_barang }}">{{ $k->jenis_barang }}</option>
                                     @endforeach
                                 </select>
+                                @error('jenis_barang')
+                                    <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
+                                @enderror
                                 <br>
                                 <label>Stok</label>
                                     <input type="integer" name="stok" class="form-control">
                                     @error('stok')
-                                        <div class="error" style="color:#CD0404"><b>Input dengan angka</b></div>
+                                        <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                     @enderror
                             </div>
                             <a href="/data" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Cancel</i></a>

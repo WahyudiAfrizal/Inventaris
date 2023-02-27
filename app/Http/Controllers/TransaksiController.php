@@ -29,7 +29,7 @@ class TransaksiController extends Controller
         //dd($data->all());
         $data->validate([
             'tanggal' => 'required',
-            'nama_barang'=> 'required',
+            'barang_id'=> 'required',
             'jenis' => 'required',
             'jumlah' => 'required|integer',
             'keterangan' => 'required'
@@ -37,13 +37,13 @@ class TransaksiController extends Controller
 
         Transaksi::create([
             'tanggal'=>$data->tanggal,
-            'nama_barang'=>$data->nama_barang,
+            'barang_id'=>$data->barang_id,
             'jenis'=>$data->jenis,
             'jumlah'=>$data->jumlah,
             'keterangan'=>$data->keterangan
         ]);                                          
         
-        $data_barang = DataBarang::find($data->id);
+        $data_barang = DataBarang::find($data->barang_id);
         $data_barang->stok   += $data->jumlah;
         $data_barang->save();
 

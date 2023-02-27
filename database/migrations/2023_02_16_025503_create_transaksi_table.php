@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('transaksi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('tanggal');
-            $table->string('nama_barang');
+            $table->string('barang_id');
             $table->enum('jenis',['barang_masuk','barang_keluar']);
             $table->integer('jumlah');
             $table->text('keterangan');

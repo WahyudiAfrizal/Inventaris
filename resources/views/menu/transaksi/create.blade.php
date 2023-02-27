@@ -22,13 +22,13 @@
                   <br>
 
                   <label>Nama Barang</label>
-                  <select class="form-control" name="nama_barang">
+                  <select class="form-control" name="barang_id">
                     <option value="">- Pilih Barang</option>
                     @foreach($data_barang as $k)
-                        <option value="{{ $k->nama_barang }}">{{ $k->nama_barang }}</option>
+                        <option value="{{ $k->id }}">{{ $k->id }}</option>
                     @endforeach
                   </select>
-                  @error('nama_barang')
+                  @error('barang_id')
                       <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                   @enderror
                   <br>
