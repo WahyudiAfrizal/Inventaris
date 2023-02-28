@@ -5,6 +5,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DataBarangController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -38,16 +39,18 @@ Route::middleware('auth')->group(function(){
     Route::get('/data',                 [DataBarangController::class, 'index']);
     Route::get('/data/create',          [DataBarangController::class, 'create']);
     Route::post('/data/store',          [DataBarangController::class, 'store']);
-    Route::get('/data/edit/{id}',        [DataBarangController::class, 'edit']);
-    Route::put('/data/update/{id}',      [DataBarangController::class, 'update']);
-    Route::get('/data/delete/{id}',      [DataBarangController::class, 'delete']);
+    Route::get('/data/edit/{id}',       [DataBarangController::class, 'edit']);
+    Route::put('/data/update/{id}',     [DataBarangController::class, 'update']);
+    Route::get('/data/delete/{id}',     [DataBarangController::class, 'delete']);
 
 
     Route::get('/transaksi',            [TransaksiController::class, 'index']);
     Route::get('/transaksi/create',     [TransaksiController::class, 'create']);
     Route::post('/transaksi/store',     [TransaksiController::class, 'store']);
-    Route::get('/transaksi/delete/{id}', [TransaksiController::class, 'delete']);
-
+    Route::get('/transaksi/delete/{id}',[TransaksiController::class, 'delete']);
+    
+    Route::post('/post',                [PostController::class, 'post']);
+    
     Route::get('/laporan',              [LaporanController::class, 'laporan']);
     Route::get('/cetak',                [LaporanController::class, 'cetak']);
 });

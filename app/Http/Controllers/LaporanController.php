@@ -14,18 +14,10 @@ class LaporanController extends Controller
     }
     public function laporan(){
         $transaksi = Transaksi::all();
-        $data = DataBarang :: all();
-        return view('menu.laporan.laporan', [
-            'transaksi' => $transaksi,
-            'data' => $data
-        ]);
+        return view('menu.laporan.laporan', ['transaksi' => $transaksi]);
     }
     public function cetak(){
         $transaksi = Transaksi::all();
-        $data = DataBarang :: all();
-        return view('menu.laporan.cetak', [
-            'transaksi' => $transaksi,
-            'data' => $data
-        ]);
+        return view('menu.laporan.cetak', ['transaksi' => $transaksi]);
     }
 }

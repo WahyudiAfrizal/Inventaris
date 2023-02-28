@@ -29,16 +29,14 @@
                     </thead>
                     <tbody>
                         @foreach ($transaksi as $t)
-                        @foreach ($data as $d)
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$t->tanggal}}</td>
-                            <td>{{$d->nama_barang}}</td>
+                            <td>{{$t->databarang->nama_barang}}</td>
                             <td>{{$t->jenis}}</td>
                             <td>{{$t->jumlah}}</td>
                             <td>{{$t->keterangan}}</td>
                         </tr>
-                        @endforeach
                         @endforeach
                     </tbody>
                 </table><br>
