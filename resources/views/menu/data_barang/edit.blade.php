@@ -27,12 +27,12 @@
                                 @enderror
                                     <div class="mt-3"><img src="" id="output" width="150"></div>
                             <label>Jenis Barang</label>        
-                            <select class="form-control" name="jenis_barang">
+                            <select class="form-control" name="jenis_id">
                                 @foreach($barang as $b)
-                                    <option value="{{ $b->jenis_barang }}" {{ $b->jenis_barang == $data_barang->jenis_barang ? 'selected' : '' }}>{{ $b->jenis_barang }}</option>
+                                    <option value="{{ $b->id }}" {{ $b->jenis_barang == $data_barang->jenis_barang ? 'selected' : '' }}>{{ $b->jenis_barang }}</option>
                                 @endforeach
                             </select> 
-                            @error('jenis_barang')
+                            @error('jenis_id')
                                 <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                             @enderror                  
                         </div>

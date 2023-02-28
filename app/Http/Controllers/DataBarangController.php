@@ -30,7 +30,7 @@ class DataBarangController extends Controller
         $data->validate([
             'nama_barang' => 'required|unique:data_barang,nama_barang',
             'foto' => 'required|image|mimes:jpg,png',
-            'jenis_barang' => 'required',
+            'jenis_id' => 'required',
             'stok' => 'required|integer'
         ]);
 
@@ -42,7 +42,7 @@ class DataBarangController extends Controller
          $barang = new DataBarang;
          $barang->nama_barang = $data->nama_barang;
          $barang->foto  = 'uploads/barang/'.$new_foto;
-         $barang->jenis_barang = $data->jenis_barang;
+         $barang->jenis_id = $data->jenis_id;
          $barang->stok = $data->stok;
          $barang->save();
         
@@ -61,7 +61,7 @@ class DataBarangController extends Controller
     public function update(Request $data, $id){
         $data->validate([
             'nama_barang' => 'required',
-            'jenis_barang' => 'required',
+            'jenis_id' => 'required',
             'foto' => 'required'
         ]);
         $data_barang = DataBarang::find($id);
@@ -78,11 +78,11 @@ class DataBarangController extends Controller
         }
 
         $d_nama = $data->nama_barang;
-        $d_jenis = $data->jenis_barang;
+        $d_jenis = $data->jenis_id;
 
         $data_barang->nama_barang = $d_nama;
         $data_barang->foto  = 'uploads/barang/'.$new_foto;
-        $data_barang->jenis_barang = $d_jenis;
+        $data_barang->jenis_id = $d_jenis;
         $data_barang->save();
 
         return redirect('/data')->with('status', 'Data berhasil diubah');

@@ -9,4 +9,9 @@ class Barang extends Model
 {
     protected $table = "barang";
     protected $fillable = ["jenis_barang"];
+
+    public function databarang()
+    {
+    return $this->hasMany(DataBarang::class, 'jenis_id');
+    }
 }

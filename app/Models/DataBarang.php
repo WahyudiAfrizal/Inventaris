@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class DataBarang extends Model
 {
     protected $table = "data_barang";
-    protected $fillable = ["nama_barang","foto","jenis_barang","stok"];
+    protected $fillable = ["nama_barang","foto","jenis_id","stok"];
+
+    public function barang()
+    {
+        return $this->belongsTo(Barang::class, 'jenis_id');
+    }
 
     public function transaksi()
     {

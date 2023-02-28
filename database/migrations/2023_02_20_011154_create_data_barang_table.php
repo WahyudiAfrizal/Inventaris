@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('data_barang', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_barang');
-            $table->string('jenis_barang');
+            $table->string('jenis_id');
             $table->integer('stok');
             $table->timestamps();
         });

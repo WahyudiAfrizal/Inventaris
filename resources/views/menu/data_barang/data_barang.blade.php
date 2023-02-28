@@ -43,7 +43,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$d->nama_barang }}</td>
                                 <td><img src="{{ asset($d->foto)}}" width="50"></td>
-                                <td>{{$d->jenis_barang}}</td>
+                                <td>{{$d->barang->jenis_barang}}</td>
                                 <td>{{$d->stok}}</td>
                                 <td class="text-center">
                                        <a href="{{ url('/data/edit/'.$d->id) }}" class="btn bg-gradient-warning btn-sm">

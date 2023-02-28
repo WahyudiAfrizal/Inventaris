@@ -29,13 +29,13 @@
                                 @enderror
                                 <br>
                                 <label>Jenis Barang</label>
-                                <select class="form-control" name="jenis_barang">
+                                <select class="form-control" name="jenis_id">
                                     <option value="">- Pilih barang</option>
                                     @foreach($barang as $k)
-                                        <option value="{{ $k->jenis_barang }}">{{ $k->jenis_barang }}</option>
+                                        <option value="{{ $k->id }}">{{ $k->jenis_barang }}</option>
                                     @endforeach
                                 </select>
-                                @error('jenis_barang')
+                                @error('jenis_id')
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
                                 <br>
