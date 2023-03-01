@@ -21,12 +21,10 @@
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
                             <label>Foto Barang</label>
-                            <input type="file" name="foto" class="form-control" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
-                                @foreach ($foto as $item)
-                                    <div class="mt-3">
-                                        <img src="{{asset($item->foto)}}" id="output" width="150">
-                                    </div>
-                                @endforeach
+                            <input type="file" name="foto" class="form-control" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">    
+                            <div class="mt-3">
+                                <img src="{{asset($data_barang->foto)}}" id="output" width="150" srcset="">
+                            </div>       
                             <label>Jenis Barang</label>        
                             <select class="form-control" name="jenis_id">
                                 @foreach($barang as $b)
