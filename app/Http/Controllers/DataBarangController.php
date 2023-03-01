@@ -52,9 +52,11 @@ class DataBarangController extends Controller
     public function edit($id){
         $barang = Barang::all();
         $data_barang = DataBarang::find($id);
+        $data = DataBarang::all();
         return view('menu.data_barang.edit', [
             'barang' => $barang,
-            'data_barang' => $data_barang
+            'data_barang' => $data_barang,
+            'foto' => $data
         ]);
     }
  
@@ -62,27 +64,32 @@ class DataBarangController extends Controller
         $data->validate([
             'nama_barang' => 'required',
             'jenis_id' => 'required',
-            'foto' => 'required'
+            'foto' => 'image|mimes:jpg,png'
         ]);
         $data_barang = DataBarang::find($id);
 
         if($data->hasFile('foto')){
-            $data->validate([
-            'foto' => 'required|image|mimes:jpg,png',
-        ]);
             File::delete($data_barang->foto);
+            
             $foto = $data->foto;
+            $d_nama = $data->nama_barang;
+            $d_jenis = $data->jenis_id;
+
             $slug = Str::slug($foto->getClientOriginalName());
             $new_foto = time() .'_'. $slug;
             $foto->move('uploads/barang',$new_foto);
+            $data_barang->foto  = 'uploads/barang/'.$new_foto;
+            
+            $data_barang->nama_barang = $d_nama;
+            $data_barang->jenis_id = $d_jenis;
+        }else{
+
+            $d_nama = $data->nama_barang;
+            $d_jenis = $data->jenis_id;
+
+            $data_barang->nama_barang = $d_nama;
+            $data_barang->jenis_id = $d_jenis;
         }
-
-        $d_nama = $data->nama_barang;
-        $d_jenis = $data->jenis_id;
-
-        $data_barang->nama_barang = $d_nama;
-        $data_barang->foto  = 'uploads/barang/'.$new_foto;
-        $data_barang->jenis_id = $d_jenis;
         $data_barang->save();
 
         return redirect('/data')->with('status', 'Data berhasil diubah');
