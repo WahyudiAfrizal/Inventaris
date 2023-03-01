@@ -16,6 +16,14 @@
     </section>
     <section class="content">
         <div class="container-fluid">
+            <form method="post" action="/post">
+                @csrf
+                <div class="input-group mb-3">
+                    <input type="date" class="form-control" name="awal">
+                    <input type="date" class="form-control" name="akhir">
+                    <input type="submit" value="Cari" class="btn btn-primary">
+                </div>
+            </form>
             <div class="card">        
                 {{-- Tabel --}}
                 <div class="card-body">
@@ -41,7 +49,7 @@
                             @foreach ($transaksi as $t)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{ date('d-m-Y',strtotime($t->tanggal)) }}</td>
+                                <td>{{ date('d-m-Y',strtotime($t->tanggal))}}</td>
                                 <td>{{$t->databarang->nama_barang}}</td>
                                 <td>{{$t->jenis}}</td>
                                 <td>{{$t->jumlah}}</td>

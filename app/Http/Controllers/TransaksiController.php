@@ -64,4 +64,11 @@ class TransaksiController extends Controller
 
         return redirect('transaksi')->with('status', 'Transaksi berhasil dihapus');
     }
+
+    public function post( Request $data)
+    {
+        $transaksi = Transaksi::whereBetween('tanggal',[$data->awal, $data->akhir])->get();
+
+        return view('menu.transaksi.transaksi',['transaksi' => $transaksi]);
+    }
 }

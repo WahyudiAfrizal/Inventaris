@@ -48,9 +48,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/transaksi/create',     [TransaksiController::class, 'create']);
     Route::post('/transaksi/store',     [TransaksiController::class, 'store']);
     Route::get('/transaksi/delete/{id}',[TransaksiController::class, 'delete']);
-    
-    Route::post('/post',                [PostController::class, 'post']);
-    
+    Route::post('/post',                [TransaksiController::class, 'post']);
+        
     Route::get('/laporan',              [LaporanController::class, 'laporan']);
     Route::get('/cetak',                [LaporanController::class, 'cetak']);
 });
