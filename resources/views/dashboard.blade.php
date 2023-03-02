@@ -3,7 +3,7 @@
 @section('halaman','Dashboard')
 @section('dashboard','active')
 @section('content')
-<div class="content-wrapper">
+<div class="content-wrapper" style="background-color: #E1EEDD">
   <div class="content">
     <div class="content-header">
       <div class="container-fluid">
@@ -26,19 +26,17 @@
           </div>
         </div>
         <div class="col-lg-4 col-6">
-          <!-- small box -->
-          <div class="small-box bg-warning">
+          <div class="small-box" style="background-color: rgb(78, 79, 78)">
             <div class="inner">
-              <h3>{{ $data_barang }}</h3>
+              <h3 style="color: white">{{ $data_barang }}</h3>
 
-              <p>Data Barang</p>
+              <p style="color: white">Data Barang</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
           </div>
         </div>
-        <!-- ./col -->
         <div class="col-lg-4 col-6">
           <!-- small box -->
           <div class="small-box bg-success">
@@ -52,7 +50,6 @@
             </div>
           </div>
         </div>
-        <!-- ./col -->
       </div>
     </div>
     <div class="container-fluid">
@@ -72,29 +69,18 @@
         type: 'column'
     },
     title: {
-        text: 'Laporan Inventaris'
+        text: 'Diagram Data Inventaris'
     },
     xAxis: {
         categories: [
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec'
+            ''
         ],
         crosshair: true
     },
     yAxis: {
         min: 0,
         title: {
-            text: 'Nilai'
+            text: '     '
         }
     },
     tooltip: {
@@ -120,7 +106,7 @@
     },{
         name: 'Transaksi',
         data: [{{ $transaksi }}]
-    },
+    }
   ]
 });
 </script>

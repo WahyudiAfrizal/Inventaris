@@ -9,7 +9,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Data Barang</h1><br>
-                    <a href="{{ url('/data/create') }}" class="btn  bg-gradient-primary btn-xs">
+                    <a href="{{ url('/data/create') }}" class="btn  bg-primary btn-xs">
                         <i class="bi bi-plus-lg"></i> Input Data Barang</a>
                 </div>
             </div>
@@ -46,9 +46,9 @@
                                 <td>{{$d->barang->jenis_barang}}</td>
                                 <td>{{$d->stok}}</td>
                                 <td class="text-center">
-                                       <a href="{{ url('/data/edit/'.$d->id) }}" class="btn bg-gradient-warning btn-sm">
+                                       <a href="{{ url('/data/edit/'.$d->id) }}" class="btn bg-warning btn-sm">
                                         <i class="bi bi-pencil-square"></i> Edit</a>
-                                       <a href="{{ url('/data/delete/'.$d->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin untuk menghapus?')">
+                                       <a href="{{ url('/data/delete/'.$d->id) }}" class="btn bg-danger btn-sm" onclick="return confirm('Apakah anda yakin untuk menghapus?')">
                                         <i class="bi bi-trash"></i> Hapus</a>
                                 </td>
                             </tr>

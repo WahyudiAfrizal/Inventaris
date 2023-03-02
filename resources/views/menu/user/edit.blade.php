@@ -27,13 +27,6 @@
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></b></div>
                                 @enderror
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="exampleInputEmail1" class="form-label">Password</label>
-                                <input type="password" class="form-control" name="password">
-                                @error('password')
-                                    <div class="error" style="color:#CD0404"><b>{{$message}}</b></b></div>
-                                @enderror
-                            </div> --}}
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Role</label>
                                 <select name="role" class="form-control" aria-label="Default select example">
@@ -45,8 +38,8 @@
                                     <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                                 @enderror
                             </div>
-                            <a href="/user" class="btn bg-gradient-danger btn-sm"><i class="fa fa-undo"> Kembali</i></a>
-                            <button type="submit" class="btn bg-gradient-primary btn-sm"><i class="fa fa-save"> Simpan</i></button>
+                            <a href="/user" class="btn bg-danger btn-sm"><i class="fa fa-undo"> Kembali</i></a>
+                            <button type="submit" class="btn bg-primary btn-sm"><i class="fa fa-save"> Simpan</i></button>
                         </form>
                     </div>
                 </div>

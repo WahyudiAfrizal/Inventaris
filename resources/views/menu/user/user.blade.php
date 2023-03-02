@@ -8,7 +8,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Data User</h1><br>
-                    <a href="/user/create" class="btn bg-gradient-primary btn-xs"><i class="bi bi-plus-lg"></i>
+                    <a href="/user/create" class="btn bg-primary btn-xs"><i class="bi bi-plus-lg"></i>
                         Tambah User</a>
                 </div>
             </div>
@@ -43,9 +43,9 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->role}}</td>
                                 <td class="text-center">
-                                    <a href="{{ url('/user/edit/'.$user->id) }}" class="btn bg-gradient-warning btn-sm">
+                                    <a href="{{ url('/user/edit/'.$user->id) }}" class="btn bg-warning btn-sm">
                                     <i class="bi bi-pencil-square"></i> Edit</a>
-                                    <a href="{{ url('/user/delete/'.$user->id) }}" class="btn bg-gradient-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
+                                    <a href="{{ url('/user/delete/'.$user->id) }}" class="btn bg-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
                                     <i class="bi bi-trash"></i> Hapus</a>
                                 </td>                              
                             </tr>
