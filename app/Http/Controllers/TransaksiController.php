@@ -35,25 +35,38 @@ class TransaksiController extends Controller
             'keterangan' => 'required'
         ]);
         // dd($data->jenis);
-        Transaksi::create([
-            'tanggal'=>$data->tanggal,
-            'barang_id'=>$data->barang_id,
-            'jenis'=>$data->jenis,
-            'jumlah'=>$data->jumlah,
-            'keterangan'=>$data->keterangan
-        ]);                                          
-        
+
         if ($data->jenis == 'barang_masuk'){
+            
+            Transaksi::create([
+                'tanggal'=>$data->tanggal,
+                'barang_id'=>$data->barang_id,
+                'jenis'=>$data->jenis,
+                'jumlah'=>$data->jumlah,
+                'keterangan'=>$data->keterangan
+            ]); 
                 $data_barang = DataBarang::find($data->barang_id);
                 $data_barang->stok   += $data->jumlah;
                 $data_barang->save();
         }else{
                 $data_barang = DataBarang::find($data->barang_id);
-                $data_barang->stok   -= $data->jumlah;
-                $data_barang->save();
-        }
-        
 
+                if($data_barang->stok   < $data->jumlah){
+
+                    return redirect('/transaksi')->with('status','Barang tidak masuk....!!!     Jumlah barang melebihi stok');
+                
+                }else{
+                    Transaksi::create([
+                        'tanggal'=>$data->tanggal,
+                        'barang_id'=>$data->barang_id,
+                        'jenis'=>$data->jenis,
+                        'jumlah'=>$data->jumlah,
+                        'keterangan'=>$data->keterangan
+                    ]); 
+                        $data_barang->stok   -= $data->jumlah;
+                        $data_barang->save();
+                }
+        }
         return redirect('/transaksi')->with('status','Data berhasil ditambahkan');
     }
 
