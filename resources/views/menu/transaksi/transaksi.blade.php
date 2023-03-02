@@ -16,14 +16,6 @@
     </section>
     <section class="content">
         <div class="container-fluid">
-            <form method="post" action="/post">
-                @csrf
-                <div class="input-group mb-3">
-                    <input type="date" class="form-control" name="awal">
-                    <input type="date" class="form-control" name="akhir">
-                    <input type="submit" value="Cari" class="btn btn-primary">
-                </div>
-            </form>
             <div class="card">        
                 {{-- Tabel --}}
                 <div class="card-body">

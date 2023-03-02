@@ -20,4 +20,10 @@ class LaporanController extends Controller
         $transaksi = Transaksi::all();
         return view('menu.laporan.cetak', ['transaksi' => $transaksi]);
     }
+    public function post( Request $data)
+    {
+        $transaksi = Transaksi::whereBetween('tanggal',[$data->awal, $data->akhir])->get();
+
+        return view('menu.laporan.cetak',['transaksi' => $transaksi]);
+    }
 }

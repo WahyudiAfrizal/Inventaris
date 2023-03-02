@@ -8,12 +8,20 @@
             <div class="container-fluid">
               <div class="row mb-2">
                 <div class="col-sm-8">
-                  <h3 style="color: rgb(95, 93, 93)">laporan Transaksi</h3>
+                  <h3 style="color: rgb(95, 93, 93)">Laporan Transaksi</h3>
                 </div>
               </div>
             </div>
           </div>
         <div class="container-fluid">
+          <form method="post" action="/post">
+            @csrf
+            <div class="input-group mb-3">
+                <input type="date" class="form-control" name="awal">
+                <input type="date" class="form-control" name="akhir">
+                <input type="submit" value="Cari" class="btn btn-primary">
+            </div>
+          </form>
             <div class="card">
                 <div class="card-body">
                   <table class="table table-bordered">
