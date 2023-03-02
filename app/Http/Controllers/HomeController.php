@@ -29,9 +29,15 @@ class HomeController extends Controller
     {
         $barang = Barang::count();
         $data_barang = DataBarang::count();
-        $user = User::count();
         $transaksi = Transaksi::count();
+        
+        $br = DataBarang::all();
+        $dt = [];
+        foreach($br as $brg){
+            $dt[] = $brg->nama_barang;
+        }
+        //dd(json_encode($c_brg));
 
-        return view('dashboard', compact('barang', 'data_barang', 'user','transaksi'));
+        return view('dashboard', compact('barang', 'data_barang','transaksi','dt'));
     }
 }
