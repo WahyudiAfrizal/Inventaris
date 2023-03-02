@@ -15,7 +15,7 @@
               @csrf
               <div class="form-group">
                   <label>Tanggal</label>
-                  <input type="date" name="tanggal" value="{{ old('tanggal') }}" class="form-control">
+                  <input type="date" name="tanggal" value="{{ date('Y-m-d') }}" class="form-control">
                   @error('tanggal')
                       <div class="error" style="color:#CD0404"><b>{{$message}}</b></div>
                   @enderror 
