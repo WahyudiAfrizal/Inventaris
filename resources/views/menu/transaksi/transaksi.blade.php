@@ -25,11 +25,6 @@
                         {{ Session::get('status') }}
                     </div>
                     @endif
-                    @if(Session::has('notacces'))
-                    <div class="alert alert-danger">
-                        {{ Session::get('notacces') }}
-                    </div>
-                    @endif
                     <table class="table table-striped">
                         <thead>
                             <tr>

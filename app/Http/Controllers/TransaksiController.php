@@ -56,7 +56,7 @@ class TransaksiController extends Controller
 
                 if($data_barang->stok   < $data->jumlah){
 
-                    return redirect('/transaksi')->with('notacces','Transaksi tidak bisa diproses. Jumlah barang melebihi stok');
+                    return redirect('/transaksi/create')->with('notacces','Transaksi tidak bisa diproses. Jumlah barang melebihi stok');
                 
                 }else{
                     Transaksi::create([
