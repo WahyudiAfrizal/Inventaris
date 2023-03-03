@@ -21,7 +21,7 @@
               <p>Jenis Barang</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-bag" style="color: rgb(185, 185, 255)"></i>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
               <p style="color: white">Data Barang</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="ion ion-pie-graph" style="color:darkgrey"></i>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
               <p>Transaksi</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="ion ion-person-add" style="color:rgb(147, 209, 147)"></i>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
           <div id="chartNilai"></div>
         </div>
       </div>
-    </div>
+    </div><br>
   </div>
 </div>
 @section('footer')
