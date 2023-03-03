@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataBarang;
 use App\Models\Transaksi;
+use App\Models\DataBarang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TransaksiController extends Controller
 {
@@ -15,6 +16,7 @@ class TransaksiController extends Controller
 
     public function index(){
         $transaksi = Transaksi::all();
+        $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
         return view('menu.transaksi.transaksi', ['transaksi' => $transaksi]);
     }
 
@@ -43,7 +45,8 @@ class TransaksiController extends Controller
                 'barang_id'=>$data->barang_id,
                 'jenis'=>$data->jenis,
                 'jumlah'=>$data->jumlah,
-                'keterangan'=>$data->keterangan
+                'keterangan'=>$data->keterangan,
+                'user_id' => auth()->id()
             ]); 
                 $data_barang = DataBarang::find($data->barang_id);
                 $data_barang->stok   += $data->jumlah;
@@ -61,7 +64,8 @@ class TransaksiController extends Controller
                         'barang_id'=>$data->barang_id,
                         'jenis'=>$data->jenis,
                         'jumlah'=>$data->jumlah,
-                        'keterangan'=>$data->keterangan
+                        'keterangan'=>$data->keterangan,
+                        'user_id' => auth()->id()
                     ]); 
                         $data_barang->stok   -= $data->jumlah;
                         $data_barang->save();
@@ -76,12 +80,5 @@ class TransaksiController extends Controller
         $transaksi->delete();
 
         return redirect('transaksi')->with('status', 'Transaksi berhasil dihapus');
-    }
-
-    public function post( Request $data)
-    {
-        $transaksi = Transaksi::whereBetween('tanggal',[$data->awal, $data->akhir])->get();
-
-        return view('menu.transaksi.transaksi',['transaksi' => $transaksi]);
     }
 }

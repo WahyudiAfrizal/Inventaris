@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Barang;
-use App\Models\DataBarang;
 use App\Models\Transaksi;
+use App\Models\DataBarang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,8 @@ class HomeController extends Controller
     {
         $barang = Barang::count();
         $data_barang = DataBarang::count();
-        $transaksi = Transaksi::count();
+        $transaksi = Transaksi::where('user_id', Auth::user()->id)->count();
+
         
         $br = DataBarang::all();
         $dt = [];
