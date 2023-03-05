@@ -4,12 +4,8 @@
 @section('dashboard','active')
 @section('content')
 <div class="content-wrapper" style="background-color: #E1EEDD">
-  <div class="content">
-    <div class="content-header">
-      <div class="container-fluid">
-        <h3 style="color: rgb(94, 92, 92)" class="text-center">Selamat Datang di Sistem Informasi Inventaris</h3>
-      </div>
-    </div>
+  <br>
+  <section class="content">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4 col-6">
@@ -51,20 +47,21 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
       <div class="row">
-        <div class="col-6">
-          <div id="chartNilai"></div>
+        <div class="col-4">
+          <div id="C_Inventaris"></div>
         </div>
-      </div>
-    </div><br>
-  </div>
+        <div class="col-8">
+          <div id="C_transaksi"></div>
+        </div>
+      </div><br>
+    </div>
+  </section>
 </div>
 @section('footer')
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script>
-  Highcharts.chart('chartNilai', {
+  Highcharts.chart('C_Inventaris', {
     chart: {
         type: 'column'
     },
@@ -86,7 +83,7 @@
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            '<td style="padding:0"><b>{point.y}</b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -106,6 +103,47 @@
     },{
         name: 'Transaksi',
         data: [{{ $transaksi }}]
+    }
+  ]
+});
+</script>
+<script>
+  Highcharts.chart('C_transaksi', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Data Transaksi Perbulan'
+    },
+    xAxis: {
+        categories: [
+            'januari', 'februari', 'maret', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: '     '
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.1,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Transaki',
+        data: [ {{ $jan }}, {{ $feb }}, {{ $mar }}, {{ $apr }}, {{ $mei }}, {{ $jun }}, {{ $jul }}, {{ $ags }}, {{ $sep }}, {{ $okt }}, {{ $nov }}, {{ $des }} ]
     }
   ]
 });

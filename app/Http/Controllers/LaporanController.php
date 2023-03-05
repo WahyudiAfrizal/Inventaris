@@ -13,19 +13,36 @@ class LaporanController extends Controller
     {
         $this->middleware('auth');
     }
-    public function laporan(){
-        $transaksi = Transaksi::all();
-        $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+    public function laporan(Request $data){
+        $user = $data->user();
+        
+        if($user -> role == "superadmin"){
+            $transaksi = Transaksi::all();
+        }else{
+            $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+        }
         return view('menu.laporan.laporan', ['transaksi' => $transaksi]);
     }
-    public function cetak(){
-        $transaksi = Transaksi::all();
-        $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+    public function cetak(Request $data){
+        $user = $data->user();
+        
+        if($user -> role == "superadmin"){
+            $transaksi = Transaksi::all();
+        }else{
+            $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+        }
         return view('menu.laporan.cetak', ['transaksi' => $transaksi]);
     }
     public function post( Request $data)
     {
-        $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+        $user = $data->user();
+        
+        if($user -> role == "superadmin"){
+            $transaksi = Transaksi::all();
+        }else{
+            $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+        }
+        
         $transaksi = Transaksi::whereBetween('tanggal',[$data->awal, $data->akhir])->get();
 
         return view('menu.laporan.cetak',['transaksi' => $transaksi]);

@@ -14,10 +14,15 @@ class TransaksiController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
-        $transaksi = Transaksi::all();
-        $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
-        return view('menu.transaksi.transaksi', ['transaksi' => $transaksi]);
+    public function index(Request $data){
+        $user = $data->user();
+
+        if($user -> role == "superadmin"){
+            $transaksi = Transaksi::all();
+        }else{        
+            $transaksi = Transaksi::where('user_id', Auth::user()->id)->get();
+        }
+            return view('menu.transaksi.transaksi', ['transaksi' => $transaksi]);
     }
 
     public function create()
