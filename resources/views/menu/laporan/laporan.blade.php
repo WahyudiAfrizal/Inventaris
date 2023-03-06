@@ -14,7 +14,7 @@
             </div>
           </div>
         <div class="container-fluid">
-          <form method="post" action="/post">
+          <form method="post" action="/post" target="_blank">
             @csrf
             <div class="input-group mb-3">
                 <input type="date" class="form-control" name="awal">

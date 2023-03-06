@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Barang;
 use App\Models\DataBarang;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
@@ -98,6 +99,9 @@ class DataBarangController extends Controller
         $data_barang = DataBarang::find($id);
         File::delete($data_barang->foto);
         $data_barang->delete();
+        
+        $transaksi = Transaksi::where('barang_id',$id);
+        $transaksi->delete();
 
         return redirect('/data')->with('status', 'Data berhasil dihapus');
     }

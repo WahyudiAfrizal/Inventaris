@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Barang;
 use App\Models\DataBarang;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+
 
 
 class BarangController extends Controller
@@ -60,6 +61,9 @@ class BarangController extends Controller
     {
         $barang = Barang::find($id);
         $barang->delete();
+
+        $data_barang = DataBarang::where('jenis_id',$id);
+        $data_barang->delete();
         
         return redirect('/barang')->with('status', 'Data berhasil dihapus');
         
